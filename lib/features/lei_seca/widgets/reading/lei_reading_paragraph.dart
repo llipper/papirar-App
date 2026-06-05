@@ -130,7 +130,8 @@ class LeiReadingParagraph extends StatelessWidget {
 
     final contentSpans = _contentSpans(text);
 
-    final hasRubricaText = rubricaText != null && rubricaText!.trim().isNotEmpty;
+    final hasRubricaText =
+        rubricaText != null && rubricaText!.trim().isNotEmpty;
     final Widget content;
 
     if (resolvedAudioExplanation == null) {
@@ -139,7 +140,7 @@ class LeiReadingParagraph extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: LeiReadingLayoutConfig.rubricaPadding,
+              padding: _rubricaPaddingFor(text),
               child: _SelectableMarkedText(
                 text: rubricaText!,
                 leiId: leiId,
@@ -148,7 +149,7 @@ class LeiReadingParagraph extends StatelessWidget {
                 highlights: rubricaHighlights,
                 onHighlight: onHighlight,
                 onRemoveHighlight: onRemoveHighlight,
-                baseStyle: styles.rubrica,
+                baseStyle: _rubricaStyleFor(text),
               ),
             ),
             _SelectableMarkedText(
@@ -194,13 +195,12 @@ class LeiReadingParagraph extends StatelessWidget {
         rubricaText: rubricaText,
         rubricaPartIndex: rubricaPartIndex,
         rubricaHighlights: rubricaHighlights,
+        rubricaPadding: _rubricaPaddingFor(text),
+        rubricaStyle: _rubricaStyleFor(text),
       );
     }
 
-    return Padding(
-      padding: _contentPadding(text),
-      child: content,
-    );
+    return Padding(padding: _contentPadding(text), child: content);
   }
 
   EdgeInsets _contentPadding(String text) {
@@ -211,6 +211,41 @@ class LeiReadingParagraph extends StatelessWidget {
       return LeiReadingLayoutConfig.incisoPadding;
     }
     return LeiReadingLayoutConfig.bodyTextPadding;
+  }
+
+  EdgeInsets _rubricaPaddingFor(String targetText) {
+    if (LeiReadingTextUtils.ehAlinea(targetText)) {
+      return LeiReadingLayoutConfig.rubricaAlineaPadding;
+    }
+    if (LeiReadingTextUtils.ehIncisoRomano(targetText)) {
+      return LeiReadingLayoutConfig.rubricaIncisoPadding;
+    }
+    if (LeiReadingTextUtils.ehParagrafo(targetText)) {
+      return LeiReadingLayoutConfig.rubricaParagraphPadding;
+    }
+    return LeiReadingLayoutConfig.rubricaPadding;
+  }
+
+  TextStyle _rubricaStyleFor(String targetText) {
+    if (LeiReadingTextUtils.ehAlinea(targetText)) {
+      return styles.rubrica.copyWith(
+        color: styles.textColor.withValues(alpha: 0.58),
+        fontSize: styles.rubrica.fontSize == null
+            ? null
+            : styles.rubrica.fontSize! * 0.94,
+      );
+    }
+    if (LeiReadingTextUtils.ehIncisoRomano(targetText)) {
+      return styles.rubrica.copyWith(
+        color: styles.textColor.withValues(alpha: 0.66),
+      );
+    }
+    if (LeiReadingTextUtils.ehParagrafo(targetText)) {
+      return styles.rubrica.copyWith(
+        color: styles.textColor.withValues(alpha: 0.72),
+      );
+    }
+    return styles.rubrica;
   }
 
   TextStyle _strongPrefixStyle() {
@@ -237,9 +272,7 @@ class LeiReadingParagraph extends StatelessWidget {
     ).firstMatch(text);
     if (paragrafoMatch != null) return paragrafoMatch.end;
 
-    final incisoMatch = RegExp(
-      r'^\s*-?\s*[IVXLCDM]+\s*-\s*',
-    ).firstMatch(text);
+    final incisoMatch = RegExp(r'^\s*-?\s*[IVXLCDM]+\s*-\s*').firstMatch(text);
     return incisoMatch?.end;
   }
 }
@@ -258,6 +291,8 @@ class _ParagraphWithAudioButton extends StatelessWidget {
   final String? rubricaText;
   final int? rubricaPartIndex;
   final List<LeiHighlight> rubricaHighlights;
+  final EdgeInsets rubricaPadding;
+  final TextStyle rubricaStyle;
 
   const _ParagraphWithAudioButton({
     required this.text,
@@ -273,6 +308,8 @@ class _ParagraphWithAudioButton extends StatelessWidget {
     this.rubricaText,
     this.rubricaPartIndex,
     this.rubricaHighlights = const [],
+    required this.rubricaPadding,
+    required this.rubricaStyle,
   });
 
   @override
@@ -283,7 +320,7 @@ class _ParagraphWithAudioButton extends StatelessWidget {
     ).firstMatch(text.trim());
 
     if (match == null) {
-      return _TextWithAudioButton(
+      final textWithAudio = _TextWithAudioButton(
         text: text,
         style: style,
         spans: _spansForStrongPrefix(text, strongPrefixStyle, style),
@@ -294,6 +331,28 @@ class _ParagraphWithAudioButton extends StatelessWidget {
         highlights: highlights,
         onHighlight: onHighlight,
         onRemoveHighlight: onRemoveHighlight,
+      );
+      if (rubricaText == null || rubricaText!.trim().isEmpty) {
+        return textWithAudio;
+      }
+      return Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: rubricaPadding,
+            child: _SelectableMarkedText(
+              text: rubricaText!,
+              leiId: leiId,
+              blocoIndex: blocoIndex,
+              partIndex: rubricaPartIndex ?? partIndex,
+              highlights: rubricaHighlights,
+              onHighlight: onHighlight,
+              onRemoveHighlight: onRemoveHighlight,
+              baseStyle: rubricaStyle,
+            ),
+          ),
+          textWithAudio,
+        ],
       );
     }
 
@@ -315,6 +374,8 @@ class _ParagraphWithAudioButton extends StatelessWidget {
       rubricaText: rubricaText,
       rubricaPartIndex: rubricaPartIndex,
       rubricaHighlights: rubricaHighlights,
+      rubricaPadding: rubricaPadding,
+      rubricaStyle: rubricaStyle,
     );
   }
 }
@@ -324,9 +385,7 @@ List<_MarkedTextSegment>? _spansForStrongPrefix(
   TextStyle strongStyle,
   TextStyle bodyStyle,
 ) {
-  final match = RegExp(
-    r'^\s*-?\s*[IVXLCDM]+\s*-\s*',
-  ).firstMatch(text);
+  final match = RegExp(r'^\s*-?\s*[IVXLCDM]+\s*-\s*').firstMatch(text);
   if (match == null) return null;
 
   return [
@@ -350,6 +409,8 @@ class _ParagraphLabelAudioText extends StatelessWidget {
   final String? rubricaText;
   final int? rubricaPartIndex;
   final List<LeiHighlight> rubricaHighlights;
+  final EdgeInsets rubricaPadding;
+  final TextStyle rubricaStyle;
 
   const _ParagraphLabelAudioText({
     required this.label,
@@ -366,6 +427,8 @@ class _ParagraphLabelAudioText extends StatelessWidget {
     this.rubricaText,
     this.rubricaPartIndex,
     this.rubricaHighlights = const [],
+    required this.rubricaPadding,
+    required this.rubricaStyle,
   });
 
   @override
@@ -390,9 +453,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
                 onHighlight: onHighlight,
                 onRemoveHighlight: onRemoveHighlight,
                 baseStyle: style,
-                spans: [
-                  _MarkedTextSegment(0, label.length, strongPrefixStyle),
-                ],
+                spans: [_MarkedTextSegment(0, label.length, strongPrefixStyle)],
               ),
               if (LeiReadingLayoutConfig.paragraphAudioPosition !=
                   LeiReadingAudioPosition.hidden) ...[
@@ -406,15 +467,18 @@ class _ParagraphLabelAudioText extends StatelessWidget {
               ],
             ],
           ),
-          _SelectableMarkedText(
-            text: rubricaText!,
-            leiId: leiId,
-            blocoIndex: blocoIndex,
-            partIndex: rubricaPartIndex ?? partIndex,
-            highlights: rubricaHighlights,
-            onHighlight: onHighlight,
-            onRemoveHighlight: onRemoveHighlight,
-            baseStyle: style.copyWith(fontWeight: FontWeight.w800),
+          Padding(
+            padding: rubricaPadding,
+            child: _SelectableMarkedText(
+              text: rubricaText!,
+              leiId: leiId,
+              blocoIndex: blocoIndex,
+              partIndex: rubricaPartIndex ?? partIndex,
+              highlights: rubricaHighlights,
+              onHighlight: onHighlight,
+              onRemoveHighlight: onRemoveHighlight,
+              baseStyle: rubricaStyle,
+            ),
           ),
           if (body.isNotEmpty)
             _SelectableMarkedText(

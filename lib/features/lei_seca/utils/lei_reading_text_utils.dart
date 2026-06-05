@@ -49,6 +49,11 @@ abstract final class LeiReadingTextUtils {
     return RegExp(r'^-?\s*[IVXLCDM]+\b').hasMatch(t);
   }
 
+  static bool ehAlinea(String text) {
+    final t = text.trimLeft();
+    return RegExp(r'^-?\s*[a-z]\)').hasMatch(t);
+  }
+
   static bool ehParagrafo(String text) {
     final t = text.trimLeft();
     return RegExp(

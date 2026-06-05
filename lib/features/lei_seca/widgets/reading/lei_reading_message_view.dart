@@ -32,6 +32,7 @@ class LeiReadingMessageView extends StatelessWidget {
                 mensagem,
                 textAlign: TextAlign.center,
                 style: styles.body,
+                softWrap: true,
               ),
             ),
           ),

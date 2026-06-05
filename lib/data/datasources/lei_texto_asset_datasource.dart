@@ -21,6 +21,20 @@ class LeiTextoAssetDatasource {
       return dto;
     } catch (e) {
       debugPrint('LeiTextoAssetDatasource: $assetPath — $e');
+      // Debug: dump what json assets are actually in the bundle
+      try {
+        final manifest = await rootBundle.loadString('AssetManifest.json');
+        final manifestMap = jsonDecode(manifest) as Map<String, dynamic>;
+        final jsonAssets = manifestMap.keys
+            .where((k) => k.contains('json/') && k.endsWith('.json'))
+            .toList();
+        debugPrint('Bundled JSON assets (${jsonAssets.length} total): ${jsonAssets.take(10).join(', ')}...');
+        if (!manifestMap.containsKey(assetPath)) {
+          debugPrint('>>> $assetPath NOT FOUND in AssetManifest.json');
+        }
+      } catch (manifestErr) {
+        debugPrint('Could not load AssetManifest: $manifestErr');
+      }
       return null;
     }
   }

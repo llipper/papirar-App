@@ -56,11 +56,13 @@ class LeiReadingBlocoItem extends StatelessWidget {
     for (var p = 0; p < partes.length; p++) {
       final isRubrica =
           partes.length > 1 && LeiReadingTextUtils.ehProvavelRubrica(partes[p]);
-      final nextIsParagrafo =
+      final nextHasHierarchy =
           p + 1 < partes.length &&
-          LeiReadingTextUtils.ehParagrafo(partes[p + 1]);
+          (LeiReadingTextUtils.ehParagrafo(partes[p + 1]) ||
+              LeiReadingTextUtils.ehIncisoRomano(partes[p + 1]) ||
+              LeiReadingTextUtils.ehAlinea(partes[p + 1]));
 
-      if (isRubrica && nextIsParagrafo) {
+      if (isRubrica && nextHasHierarchy) {
         final paragraphIndex = p + 1;
         children.add(
           LeiReadingParagraph(

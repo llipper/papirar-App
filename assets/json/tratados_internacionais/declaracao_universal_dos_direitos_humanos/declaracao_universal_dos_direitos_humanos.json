@@ -1,0 +1,1478 @@
+{
+    "id": "Declaracao_Universal_dos_Direitos_Humanos",
+    "titulo": "Declaracao Universal dos Direitos Humanos",
+    "apelido": "Declaracao Universal dos Direitos Humanos.",
+    "sigla": "",
+    "fonte": "Declaracao_Universal_dos_Direitos_Humanos.txt",
+    "preambulo": [
+        {
+            "texto": "Declaração Universal",
+            "linha": 1
+        },
+        {
+            "texto": "dos Direitos Humanos",
+            "linha": 2
+        },
+        {
+            "texto": "A Declaração Universal dos Direitos Humanos representa um dos momentos mais",
+            "linha": 3
+        },
+        {
+            "texto": "decisivos da história. Pela primeira vez, o mundo reconheceu formalmente que toda",
+            "linha": 4
+        },
+        {
+            "texto": "pessoa, independentemente de origem, credo, raça, gênero ou condição social, possui",
+            "linha": 5
+        },
+        {
+            "texto": "direitos inalienáveis. Mais do que um documento simbólico, a Declaração estabeleceu",
+            "linha": 6
+        },
+        {
+            "texto": "um novo paradigma: os direitos humanos não são uma concessão dos Estados, mas um",
+            "linha": 7
+        },
+        {
+            "texto": "compromisso irrenunciável da comunidade internacional para garantir a dignidade, a",
+            "linha": 8
+        },
+        {
+            "texto": "liberdade e a justiça para todas as pessoas.",
+            "linha": 9
+        }
+    ],
+    "divisoes": [
+        {
+            "tipo": "fecho",
+            "linha": 10,
+            "itens": [
+                {
+                    "tipo": "texto",
+                    "texto": "Esse marco aconteceu em 10 de dezembro de 1948, quando, ainda sob o impacto da",
+                    "linha": 10
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Segunda Guerra Mundial e das atrocidades cometidas contra milhões de pessoas, a",
+                    "linha": 11
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Assembleia Geral das Nações Unidas proclamou a Declaração Universal dos Direitos",
+                    "linha": 12
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Humanos. O documento nasceu da necessidade urgente de impedir que as violações do",
+                    "linha": 13
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "passado se repetissem.",
+                    "linha": 14
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Hoje, a Declaração inspira constituições nacionais e legislações ao redor do mundo,",
+                    "linha": 15
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "servindo como base para avanços sociais e para a luta contra injustiças estruturais.",
+                    "linha": 16
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Apesar das persistentes violações aos direitos humanos, a Declaração permanece como",
+                    "linha": 17
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "um farol de resistência e esperança. Seus princípios fundamentais continuam sendo um",
+                    "linha": 18
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "lembrete de que a dignidade humana deve estar acima de interesses políticos e",
+                    "linha": 19
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "econômicos.",
+                    "linha": 20
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Por isso mesmo, defender os direitos humanos não é uma escolha – é um dever. Cada",
+                    "linha": 21
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "artigo da Declaração representa uma conquista que foi arduamente obtida e que precisa",
+                    "linha": 22
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "ser protegida. Conhecê-los, promovê-los e lutar por sua implementação em todos os",
+                    "linha": 23
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "espaços – das ruas às salas de aula, das instituições às redes sociais – é um",
+                    "linha": 24
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "compromisso inegociável com um futuro mais justo e igualitário.",
+                    "linha": 25
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Esta edição da Declaração, lançada por ocasião de seus 76 anos, tem um objetivo claro:",
+                    "linha": 26
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "ampliar sua visibilidade, reafirmar sua importância e inspirar novas gerações a defender",
+                    "linha": 27
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "com firmeza aquilo que nos torna verdadeiramente humanos. A luta pelos direitos",
+                    "linha": 28
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "humanos não terminou – e nunca será em vão. O mundo só avançará na direção certa",
+                    "linha": 29
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "se continuarmos a proteger o que há de mais essencial: a liberdade, a justiça e a",
+                    "linha": 30
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "dignidade para todas as pessoas.",
+                    "linha": 31
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "INTRODUÇÃO 02",
+                    "linha": 32
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "SilviaRucks, coordenadora residenteda ONU noBrasil.",
+                    "linha": 33
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "PREÂMBULO",
+                    "linha": 34
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Considerando que o reconhecimento da dignidade inerente a todos os seres humanos",
+                    "linha": 35
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "e de seus direitos iguais e inalienáveis é o fundamento da liberdade, da justiça e da",
+                    "linha": 36
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "paz no mundo;",
+                    "linha": 37
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Considerando que o desrespeito e o desprezo pelos direitos humanos resultaram em",
+                    "linha": 38
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "atos bárbaros que ultrajam a consciência da humanidade; e considerando que o",
+                    "linha": 39
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "advento de um mundo no qual os seres humanos desfrutem de liberdade de",
+                    "linha": 40
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "expressão e crença e estejam livres do medo e da miséria foi proclamado como a mais",
+                    "linha": 41
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "alta aspiração das pessoas comuns;",
+                    "linha": 42
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Considerando ser essencial que os direitos humanos sejam protegidos pelo Estado de",
+                    "linha": 43
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Direito, para que os seres humanos não sejam obrigados, como último recurso, à",
+                    "linha": 44
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "rebelião contra a tirania e a opressão;",
+                    "linha": 45
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Considerando ser essencial promover o desenvolvimento de relações amistosas entre",
+                    "linha": 46
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "as nações;",
+                    "linha": 47
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Considerando que os povos das Nações Unidas reafirmaram na Carta da ONU sua fé",
+                    "linha": 48
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "nos direitos humanos fundamentais, na dignidade e no valor da pessoa humana e na",
+                    "linha": 49
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "igualdade de direitos entre homens e mulheres, e determinaram promover o progresso",
+                    "linha": 50
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "social e melhores padrões de vida com mais liberdade;",
+                    "linha": 51
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Considerando que os Estados-membros se comprometeram a alcançar, em",
+                    "linha": 52
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "cooperação com as Nações Unidas, a promoção do respeito universal e a observância",
+                    "linha": 53
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "dos direitos humanos e das liberdades fundamentais;",
+                    "linha": 54
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Considerando que um entendimento comum destes direitos e liberdades é da maior",
+                    "linha": 55
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "importância para o pleno cumprimento desse compromisso, agora portanto,",
+                    "linha": 56
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "A Assembleia Geral proclama a presente Declaração Universal dos Direitos",
+                    "linha": 57
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Humanos como o ideal comum a ser atingido por todos os povos e todas as nações,",
+                    "linha": 58
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "com o objetivo de que cada indivíduo e cada órgão da sociedade, tendo sempre em",
+                    "linha": 59
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "mente esta Declaração, se esforce, através do ensino e da educação, em promover o",
+                    "linha": 60
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "respeito a esses direitos e liberdades, e, pela adoção de medidas progressivas de",
+                    "linha": 61
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "caráter nacional e internacional, em assegurar o seu reconhecimento e a sua",
+                    "linha": 62
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "observância universal e efetiva, tanto entre os povos dos próprios Estados-membros,",
+                    "linha": 63
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "quanto entre os povos dos territórios sob sua jurisdição.",
+                    "linha": 64
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Adotado e proclamado pela Assembleia Geral em sua resolução 217 A (III) de 10 de",
+                    "linha": 65
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "dezembro de 1948.",
+                    "linha": 66
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "03",
+                    "linha": 67
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todos os seres humanos nascem livres e iguais",
+                    "linha": 68
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "em dignidade e direitos. São dotados de razão e",
+                    "linha": 69
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "consciência e devem agir em relação uns aos",
+                    "linha": 70
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "outros com espírito de fraternidade.",
+                    "linha": 71
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo I",
+                    "linha": 72
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Não será também feita nenhuma",
+                    "linha": 73
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "distinção fundada na condição política,",
+                    "linha": 74
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "jurídica ou internacional do país ou",
+                    "linha": 75
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "território a que pertença uma pessoa,",
+                    "linha": 76
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "quer se trate de um território",
+                    "linha": 77
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "independente, sob tutela, sem governo",
+                    "linha": 78
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "próprio, quer sujeito a qualquer outra",
+                    "linha": 79
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "limitação de soberania.",
+                    "linha": 80
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo II",
+                    "linha": 81
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem capacidade para gozar dos direitos e das liberdades",
+                    "linha": 82
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "estabelecidos nesta Declaração, sem distinção de qualquer espécie, seja",
+                    "linha": 83
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "de raça, cor, sexo, idioma, religião, opinião política ou de outra natureza,",
+                    "linha": 84
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "origem nacional ou social, posição econômica, nascimento ou qualquer",
+                    "linha": 85
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "outra condição.",
+                    "linha": 86
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "04",
+                    "linha": 87
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à vida,",
+                    "linha": 88
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "à liberdade e à segurança pessoal.",
+                    "linha": 89
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo III",
+                    "linha": 90
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém será submetido à tortura nem a",
+                    "linha": 91
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "tratamento ou castigo cruel, desumano",
+                    "linha": 92
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "ou degradante.",
+                    "linha": 93
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo IV",
+                    "linha": 94
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém será mantido em escravidão ou servidão; o tráfico de pessoas",
+                    "linha": 95
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "escravizadas será proibido em todas as suas formas.",
+                    "linha": 96
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo V",
+                    "linha": 97
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "05",
+                    "linha": 98
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem o direito de ser,",
+                    "linha": 99
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "em todos os lugares, reconhecido",
+                    "linha": 100
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "como pessoa perante a lei.",
+                    "linha": 101
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo VI",
+                    "linha": 102
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Toda pessoa tem direito a receber dos tribunais",
+                    "linha": 103
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "nacionais competentes recurso efetivo para os atos",
+                    "linha": 104
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "que violem os direitos fundamentais que lhe sejam",
+                    "linha": 105
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "reconhecidos pela constituição ou pela lei.",
+                    "linha": 106
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo VII",
+                    "linha": 107
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todas as pessoas são iguais perante a lei e têm",
+                    "linha": 108
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "direito, sem qualquer distinção, a igual proteção",
+                    "linha": 109
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "da lei. Todas as pessoas têm direito a igual",
+                    "linha": 110
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "proteção contra qualquer discriminação que",
+                    "linha": 111
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "viole a presente Declaração e contra qualquer",
+                    "linha": 112
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "incitamento a tal discriminação.",
+                    "linha": 113
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo VIII",
+                    "linha": 114
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "06",
+                    "linha": 115
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém será sujeito arbitrariamente",
+                    "linha": 116
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "a prisão, detenção ou exílio.",
+                    "linha": 117
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo IX",
+                    "linha": 118
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo X",
+                    "linha": 119
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito, em plena igualdade, a uma audiência",
+                    "linha": 120
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "justa e pública por parte de um tribunal independente e imparcial,",
+                    "linha": 121
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "para decidir sobre seus direitos e deveres ou sobre o fundamento",
+                    "linha": 122
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "de qualquer acusação criminal contra ele.",
+                    "linha": 123
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "07",
+                    "linha": 124
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XI",
+                    "linha": 125
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano acusado de um ato delituoso tem o direito de ser",
+                    "linha": 126
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "presumido inocente até que a sua culpabilidade tenha sido provada de",
+                    "linha": 127
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "acordo com a lei, em julgamento público no qual lhe tenham sido",
+                    "linha": 128
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "asseguradas todas as garantias necessárias à sua defesa.",
+                    "linha": 129
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém poderá ser culpado por qualquer ação ou omissão que, no",
+                    "linha": 130
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "momento, não constituam delito perante o direito nacional ou",
+                    "linha": 131
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "internacional. Também não será imposta pena mais forte do que aquela",
+                    "linha": 132
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "que, no momento da prática, seja aplicável ao ato delituoso.",
+                    "linha": 133
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "08",
+                    "linha": 134
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém será sujeito a interferências em",
+                    "linha": 135
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "sua vida privada, em sua família, em seu lar",
+                    "linha": 136
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "ou em sua correspondência, nem a ataques",
+                    "linha": 137
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "à sua honra e reputação. Todo ser humano",
+                    "linha": 138
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "tem direito à proteção da lei contra tais",
+                    "linha": 139
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "interferências ou ataques.",
+                    "linha": 140
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XII",
+                    "linha": 141
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XIII",
+                    "linha": 142
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à liberdade de movimento",
+                    "linha": 143
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "e residência dentro das fronteiras de cada Estado.",
+                    "linha": 144
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "09",
+                    "linha": 145
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem o direito de",
+                    "linha": 146
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "deixar qualquer país, inclusive o",
+                    "linha": 147
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "próprio, e a este regressar.",
+                    "linha": 148
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XIV",
+                    "linha": 149
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XV",
+                    "linha": 150
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito",
+                    "linha": 151
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "a uma nacionalidade.",
+                    "linha": 152
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Toda pessoa, vítima de perseguição, tem o direito",
+                    "linha": 153
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "de procurar e de gozar de asilo em outros países.",
+                    "linha": 154
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "10",
+                    "linha": 155
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Este direito não pode ser invocado em caso de",
+                    "linha": 156
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "perseguição legitimamente motivada por crimes",
+                    "linha": 157
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "de direito comum ou por atos contrários aos",
+                    "linha": 158
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "objetivos e princípios das Nações Unidas.",
+                    "linha": 159
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém será arbitrariamente",
+                    "linha": 160
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "privado de sua nacionalidade,",
+                    "linha": 161
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "nem do direito de mudar de",
+                    "linha": 162
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "nacionalidade.",
+                    "linha": 163
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XVI",
+                    "linha": 164
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XVII",
+                    "linha": 165
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à",
+                    "linha": 166
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "propriedade, individualmente ou",
+                    "linha": 167
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "em sociedade com outros.",
+                    "linha": 168
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todas as pessoas em maioridade, sem qualquer restrição de raça,",
+                    "linha": 169
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "nacionalidade ou religião, têm o direito de contrair o matrimônio e fundar",
+                    "linha": 170
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "uma família. Gozam de iguais direitos em relação ao casamento, sua",
+                    "linha": 171
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "duração e sua dissolução.",
+                    "linha": 172
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "11",
+                    "linha": 173
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "O casamento não será válido senão com o",
+                    "linha": 174
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "livre e pleno consentimento dos noivos.",
+                    "linha": 175
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "A família é o núcleo natural e",
+                    "linha": 176
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "fundamental da sociedade e tem direito",
+                    "linha": 177
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "à proteção da sociedade e do Estado.",
+                    "linha": 178
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém será arbitrariamente",
+                    "linha": 179
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "privado de sua propriedade.",
+                    "linha": 180
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XVIII",
+                    "linha": 181
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XIX",
+                    "linha": 182
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à liberdade de opinião e expressão; este",
+                    "linha": 183
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "direito inclui a liberdade de, sem interferência, ter opiniões e de procurar,",
+                    "linha": 184
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "receber e transmitir informações e ideias por quaisquer meios e",
+                    "linha": 185
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "independentemente de fronteiras.",
+                    "linha": 186
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à liberdade de pensamento, consciência e",
+                    "linha": 187
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "religião; este direito inclui a liberdade de mudar de religião ou crença e a",
+                    "linha": 188
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "liberdade de manifestar essa religião ou crença, pelo ensino, pela prática,",
+                    "linha": 189
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "pelo culto e pela observância, isolada ou coletivamente, em público ou em",
+                    "linha": 190
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "particular.",
+                    "linha": 191
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XX",
+                    "linha": 192
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à liberdade",
+                    "linha": 193
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "de reunião e associação pacíficas.",
+                    "linha": 194
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "12",
+                    "linha": 195
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Ninguém pode ser obrigado a",
+                    "linha": 196
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "fazer parte de uma associação.",
+                    "linha": 197
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXI",
+                    "linha": 198
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXII",
+                    "linha": 199
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano, como membro da sociedade, tem direito à segurança",
+                    "linha": 200
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "social e à realização, pelo esforço nacional, pela cooperação internacional",
+                    "linha": 201
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "e de acordo com a organização e recursos de cada Estado, dos direitos",
+                    "linha": 202
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "econômicos, sociais e culturais indispensáveis à sua dignidade",
+                    "linha": 203
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "e ao livre desenvolvimento de sua personalidade.",
+                    "linha": 204
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem o direito de tomar parte no governo de seu",
+                    "linha": 205
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "país diretamente ou por intermédio de representantes livremente",
+                    "linha": 206
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "escolhidos.",
+                    "linha": 207
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "13",
+                    "linha": 208
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem igual direito de",
+                    "linha": 209
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "acesso ao serviço público do seu país.",
+                    "linha": 210
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "A vontade do povo será a base da autoridade",
+                    "linha": 211
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "do governo; esta vontade será expressa em",
+                    "linha": 212
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "eleições periódicas e legítimas, por sufrágio",
+                    "linha": 213
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "universal, por voto secreto ou processo",
+                    "linha": 214
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "equivalente que assegure a liberdade de voto.",
+                    "linha": 215
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXIII",
+                    "linha": 216
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito ao trabalho, à livre escolha de emprego, a",
+                    "linha": 217
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "condições justas e favoráveis de trabalho e à proteção contra o desemprego.",
+                    "linha": 218
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "14",
+                    "linha": 219
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano, sem qualquer distinção, tem direito a igual remuneração",
+                    "linha": 220
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "por igual trabalho.",
+                    "linha": 221
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano que trabalhe tem direito a uma remuneração justa e",
+                    "linha": 222
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "satisfatória, que lhe assegure, assim como à sua família, uma existência",
+                    "linha": 223
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "compatível com a dignidade humana, e a que se acrescentarão, se",
+                    "linha": 224
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "necessário, outros meios de proteção social.",
+                    "linha": 225
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito a organizar sindicatos e",
+                    "linha": 226
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "neles ingressar para proteção de seus interesses.",
+                    "linha": 227
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXIV",
+                    "linha": 228
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito a repouso e lazer,",
+                    "linha": 229
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "inclusive à limitação razoável das horas de",
+                    "linha": 230
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "trabalho e férias periódicas remuneradas.",
+                    "linha": 231
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "15",
+                    "linha": 232
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "A maternidade e a infância têm direito a cuidados e assistência especiais.",
+                    "linha": 233
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todas as crianças, nascidas dentro ou fora do matrimônio, gozarão da",
+                    "linha": 234
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "mesma proteção social.",
+                    "linha": 235
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXV",
+                    "linha": 236
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito a um padrão de vida capaz de assegurar a si",
+                    "linha": 237
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "e à sua família saúde e bem-estar, inclusive alimentação, vestuário,",
+                    "linha": 238
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "habitação, cuidados médicos e os serviços sociais indispensáveis, e direito",
+                    "linha": 239
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "à segurança em caso de desemprego, doença, invalidez, viuvez, velhice",
+                    "linha": 240
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "ou outros casos de perda dos meios de subsistência fora de seu controle.",
+                    "linha": 241
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXVI",
+                    "linha": 242
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "A educação será orientada no sentido do pleno desenvolvimento da",
+                    "linha": 243
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "personalidade humana e do fortalecimento do respeito pelos direitos",
+                    "linha": 244
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "humanos e pelas liberdades fundamentais. A educação promoverá a",
+                    "linha": 245
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "compreensão, a tolerância e a amizade entre todas as nações e grupos",
+                    "linha": 246
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "raciais ou religiosos, e deve desenvolver as atividades da ONU em prol da",
+                    "linha": 247
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "manutenção da paz.",
+                    "linha": 248
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "16",
+                    "linha": 249
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à educação. A educação deve ser gratuita,",
+                    "linha": 250
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "pelo menos nos graus elementares e fundamentais. O ensino fundamental",
+                    "linha": 251
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "deve ser obrigatório. A educação técnica e profissional deverá ser",
+                    "linha": 252
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "disponibilizada de modo geral e a educação superior deverá ser",
+                    "linha": 253
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "igualmente acessível a todas pessoas com base no mérito.",
+                    "linha": 254
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Os pais têm prioridade de direito na escolha do tipo de educação que será",
+                    "linha": 255
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "fornecida a seus filhos.",
+                    "linha": 256
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXVII",
+                    "linha": 257
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem o direito de participar",
+                    "linha": 258
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "livremente da vida cultural da comunidade, de",
+                    "linha": 259
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "desfrutar das artes e de participar do processo",
+                    "linha": 260
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "científico e de seus benefícios.",
+                    "linha": 261
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXVIII",
+                    "linha": 262
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito a uma ordem social",
+                    "linha": 263
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "e internacional em que os direitos e liberdades estabelecidos",
+                    "linha": 264
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "na presente Declaração possam ser plenamente realizados.",
+                    "linha": 265
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "17",
+                    "linha": 266
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem direito à proteção dos",
+                    "linha": 267
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "interesses morais e materiais decorrentes de",
+                    "linha": 268
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "qualquer produção científica, literária ou",
+                    "linha": 269
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "artística da qual seja autor.",
+                    "linha": 270
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXIX",
+                    "linha": 271
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Todo ser humano tem deveres para com a comunidade, na qual",
+                    "linha": 272
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "o livre e pleno desenvolvimento de sua personalidade é possível.",
+                    "linha": 273
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Artigo XXX",
+                    "linha": 274
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Nenhuma disposição da presente",
+                    "linha": 275
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Declaração pode ser interpretada como o",
+                    "linha": 276
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "reconhecimento a qualquer Estado, grupo",
+                    "linha": 277
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "ou pessoa, do direito de exercer qualquer",
+                    "linha": 278
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "atividade ou praticar qualquer ato",
+                    "linha": 279
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "destinado à destruição de quaisquer dos",
+                    "linha": 280
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "direitos e liberdades aqui estabelecidos.",
+                    "linha": 281
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "18",
+                    "linha": 282
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "No exercício de seus direitos e liberdades, todo ser humano",
+                    "linha": 283
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "estará sujeito apenas às limitações determinadas pela lei,",
+                    "linha": 284
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "exclusivamente com o fim de assegurar o devido reconhecimento",
+                    "linha": 285
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "e respeito dos direitos e liberdades de outrem e de satisfazer as",
+                    "linha": 286
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "justas exigências da moral, da ordem pública e do bem-estar em",
+                    "linha": 287
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "uma sociedade democrática.",
+                    "linha": 288
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Esses direitos e liberdades não podem, em hipótese alguma, ser",
+                    "linha": 289
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "exercidos contrariamente aos propósitos e princípios das Nações",
+                    "linha": 290
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Unidas.",
+                    "linha": 291
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Produzido pelo Centro de Informação das Nações Unidas para o Brasil (UNIC Rio).",
+                    "linha": 292
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "Declaração Universal",
+                    "linha": 293
+                },
+                {
+                    "tipo": "texto",
+                    "texto": "dos Direitos Humanos",
+                    "linha": 294
+                }
+            ]
+        }
+    ]
+}

@@ -3,7 +3,46 @@ const path = require("path")
 
 const root = process.cwd()
 const txtDir = path.join(root, "lib", "features", "lei_seca", "json", "txt")
-const outDir = path.join(root, "lib", "features", "lei_seca", "json")
+const jsonAssetsDir = path.join(root, "assets", "json")
+// Reports stay in the source json/ dir (not bundled assets)
+const reportsDir = path.join(root, "lib", "features", "lei_seca", "json")
+
+function toAsciiFolder(name) {
+  return String(name)
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^A-Za-z0-9_.-]/g, '_')
+    .toLowerCase()
+}
+
+/**
+ * DEDICATED HIGH-FIDELITY GENERATOR
+ * All laws are generated using logic modeled after the reference
+ * Codigo_de_Processo_Penal_Militar.json to guarantee identical structure:
+ * - rich divisoes with rubricas, linha, linhaRubrica
+ * - consistent artigo/paragrafo/inciso/alinea nesting
+ * - clean fonte (basename only)
+ * - apelido, preambulo, etc.
+ *
+ * Special cases (like CPPM) have their own dedicated script (gerar_cppm_json.js)
+ * using the exact same parser style.
+ */
+
+// Recursively collect all .txt under the organized txt/ tree (codigos/, leis/, etc.)
+function collectTxtFiles(dir, base = "") {
+  const entries = fs.readdirSync(dir, { withFileTypes: true })
+  const files = []
+  for (const entry of entries) {
+    const full = path.join(dir, entry.name)
+    const rel = base ? path.join(base, entry.name) : entry.name
+    if (entry.isDirectory()) {
+      files.push(...collectTxtFiles(full, rel))
+    } else if (entry.isFile() && entry.name.endsWith(".txt")) {
+      files.push(rel)
+    }
+  }
+  return files
+}
 
 const fontes = {
   Convencao_Americana_Direitos_Humanos_Pacto_San_Jose:
@@ -213,8 +252,9 @@ function parseDocument(fileName) {
   const doc = {
     id: base,
     titulo: titulos[base] || base.replace(/_/g, " "),
+    apelido: titulos[base] || base.replace(/_/g, " "),
     sigla: siglas[base] || "",
-    fonte: fileName,
+    fonte: path.basename(fileName),
     fonteOficial: fontes[base] || null,
     geradoEm: new Date().toISOString(),
     preambulo: [],
@@ -420,6 +460,90 @@ function collectArticleTexts(doc) {
   return texts
 }
 
+function normalizeToCppmStyle(doc) {
+  // Remove generator-specific timestamp to closer match CPPM reference
+  delete doc.geradoEm
+
+  // Ensure some fields that CPPM has
+  if (!doc.hasOwnProperty('fonteHtmlLocal')) {
+    // may have been set above
+  }
+
+  // Recursively normalize numbers like "1o" -> "1º", "2o" -> "2º"
+  function walk(obj) {
+    if (!obj || typeof obj !== 'object') return
+    if (Array.isArray(obj)) {
+      obj.forEach(walk)
+      return
+    }
+    if (typeof obj.numero === 'string') {
+      obj.numero = obj.numero.replace(/o$/i, 'º').replace(/O$/i, 'º')
+    }
+    if (typeof obj.rotulo === 'string') {
+      obj.rotulo = obj.rotulo.replace(/Art\.?\s*(\d+)o\b/i, 'Art. $1º')
+        .replace(/§\s*(\d+)o\b/i, '§ $1º')
+    }
+    Object.values(obj).forEach(walk)
+  }
+  walk(doc)
+}
+
+function collectAudios(oldDoc) {
+  const map = {}
+  function makeKey(parentRotulos, current) {
+    const parts = [...parentRotulos]
+    if (current.rotulo) parts.push(current.rotulo)
+    else if (current.letra) parts.push(current.letra + ')')
+    return parts.join(' ').trim()
+  }
+  function walk(items, parentRotulos = []) {
+    if (!Array.isArray(items)) return
+    for (const item of items) {
+      if (!item) continue
+      const key = makeKey(parentRotulos, item)
+      if (item.audio) {
+        map[key] = item.audio
+      }
+      // recurse
+      walk(item.paragrafos, [...parentRotulos, item.rotulo || ''])
+      walk(item.incisos, [...parentRotulos, item.rotulo || ''])
+      walk(item.alineas, [...parentRotulos, item.rotulo || item.letra ? (item.letra + ')') : ''])
+      if (item.divisoes) walk(item.divisoes, parentRotulos)
+      if (item.artigos) walk(item.artigos, parentRotulos)
+    }
+  }
+  walk(oldDoc.divisoes || [])
+  // also top level articles if any
+  if (oldDoc.artigos) walk(oldDoc.artigos, [])
+  return map
+}
+
+function attachAudios(doc, audioMap) {
+  function makeKey(parentRotulos, current) {
+    const parts = [...parentRotulos]
+    if (current.rotulo) parts.push(current.rotulo)
+    else if (current.letra) parts.push(current.letra + ')')
+    return parts.join(' ').trim()
+  }
+  function walk(items, parentRotulos = []) {
+    if (!Array.isArray(items)) return
+    for (const item of items) {
+      if (!item) continue
+      const key = makeKey(parentRotulos, item)
+      if (audioMap[key]) {
+        item.audio = audioMap[key]
+      }
+      walk(item.paragrafos, [...parentRotulos, item.rotulo || ''])
+      walk(item.incisos, [...parentRotulos, item.rotulo || ''])
+      walk(item.alineas, [...parentRotulos, item.rotulo || item.letra ? (item.letra + ')') : ''])
+      if (item.divisoes) walk(item.divisoes, parentRotulos)
+      if (item.artigos) walk(item.artigos, parentRotulos)
+    }
+  }
+  walk(doc.divisoes || [])
+  if (doc.artigos) walk(doc.artigos, [])
+}
+
 function audit(doc) {
   const articleLabels = new Map()
   let articleCount = 0
@@ -472,15 +596,69 @@ function audit(doc) {
 
 function main() {
   const reports = []
-  const files = fs.readdirSync(txtDir).filter((name) => name.endsWith(".txt")).sort()
+  const files = collectTxtFiles(txtDir).sort()
+
+  // Generate for ALL .txt found in the organized txt/ tree (user request).
+  // Each will follow the structure pattern of Codigo_de_Processo_Penal_Militar.json
+  // as closely as possible.
   for (const file of files) {
+    const baseName = path.basename(file, ".txt")
+
+    // Special case: use the dedicated high-fidelity generator for CPPM to exactly match the reference structure
+    if (baseName === 'Codigo_de_Processo_Penal_Militar') {
+      // The dedicated script will be run separately or we skip here to avoid double generation
+      console.log('Skipping', baseName, '- use dedicated gerar_cppm_json.js for exact reference structure');
+      continue
+    }
+
     const doc = parseDocument(file)
-    const outPath = path.join(outDir, `${path.basename(file, ".txt")}.json`)
-    fs.writeFileSync(outPath, `${JSON.stringify(doc, null, 2)}\n`, "utf8")
-    reports.push(audit(doc))
+
+    // Try to enrich with fonteHtmlLocal if there is a sibling .htm in the same folder
+    try {
+      const dirOfTxt = path.dirname(path.join(txtDir, file))
+      const entries = fs.readdirSync(dirOfTxt)
+      const htm = entries.find(e => e.toLowerCase().endsWith('.htm') || e.toLowerCase().endsWith('.html'))
+      if (htm) {
+        const rel = path.relative(txtDir, path.join(dirOfTxt, htm)).replace(/\\/g, '/')
+        doc.fonteHtmlLocal = rel
+      }
+    } catch (_) {}
+
+    // Normalize to be closer to CPPM reference (use º, remove some generator-specific fields if wanted)
+    normalizeToCppmStyle(doc)
+
+    const relSubdir = path.dirname(file) // e.g. "codigos/Codigo_Penal" or "leis/Lei_xxx"
+    // Use ASCII leaf folder name for the asset path (avoids bundling problems)
+    const parts = relSubdir.split(/[\\/]/)
+    if (parts.length > 0) {
+      parts[parts.length - 1] = toAsciiFolder(parts[parts.length - 1])
+    }
+    const safeRel = parts.join('/')
+    const targetDir = path.join(jsonAssetsDir, safeRel)
+    fs.mkdirSync(targetDir, { recursive: true })
+    const outPath = path.join(targetDir, `${toAsciiFolder(baseName)}.json`)
+
+    // If the JSON already exists, preserve any existing "audio" data
+    let finalDoc = doc
+    if (fs.existsSync(outPath)) {
+      try {
+        let oldRaw = fs.readFileSync(outPath, 'utf8')
+        oldRaw = oldRaw.replace(/^\uFEFF/, '') // strip BOM if present
+        const old = JSON.parse(oldRaw)
+        const audioMap = collectAudios(old)
+        if (Object.keys(audioMap).length > 0) {
+          attachAudios(finalDoc, audioMap)
+        }
+      } catch (e) {
+        console.error('Failed to preserve audios for', baseName, e.message)
+      }
+    }
+
+    fs.writeFileSync(outPath, `${JSON.stringify(finalDoc, null, 2)}\n`, "utf8")
+    reports.push(audit(finalDoc))
   }
 
-  const reportPath = path.join(outDir, "relatorio_geracao_json.json")
+  const reportPath = path.join(reportsDir, "relatorio_geracao_json.json")
   fs.writeFileSync(reportPath, `${JSON.stringify(reports, null, 2)}\n`, "utf8")
   console.log(JSON.stringify(reports, null, 2))
 }

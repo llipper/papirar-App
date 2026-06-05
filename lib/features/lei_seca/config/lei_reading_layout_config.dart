@@ -32,6 +32,11 @@ abstract final class LeiReadingLayoutConfig {
   // Espaço da rubrica do artigo/inciso/parágrafo: left, top, right, bottom.
   static const rubricaPadding = EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 8.0);
 
+  // Variações específicas de padding para rubricas, dependendo do tipo do texto alvo (alínea, inciso, parágrafo).
+  static const rubricaAlineaPadding = EdgeInsets.fromLTRB(24.0, 0.0, 0.0, 4.0);
+  static const rubricaIncisoPadding = EdgeInsets.fromLTRB(12.0, 0.0, 0.0, 6.0);
+  static const rubricaParagraphPadding = EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 6.0);
+
   // Espaço do parágrafo com "§" ou "Parágrafo único": left, top, right, bottom.
   static const paragraphPadding = EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 8.0);
 

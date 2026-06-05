@@ -6,7 +6,7 @@ class LeiModel {
   final String sigla;
   final String categoria;
   final String ultimaAtualizacao;
-  /// Caminho do asset JSON (`lib/features/lei_seca/json/...`). Null = sem texto ainda.
+  /// Caminho do asset JSON (`assets/json/<cat>/<doc>/<doc>.json`). Null = sem texto ainda.
   final String? jsonAsset;
 
   LeiModel({
