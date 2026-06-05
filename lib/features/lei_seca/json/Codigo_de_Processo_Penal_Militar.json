@@ -1,0 +1,870 @@
+{
+    "id": "Codigo_de_Processo_Penal_Militar",
+    "titulo": "DECRETO-LEI Nº 1.002, DE 21 DE OUTUBRO DE 1969.",
+    "apelido": "Código de Processo Penal Militar.",
+    "sigla": "CPPM",
+    "fonte": "Codigo_de_Processo_Penal_Militar.txt",
+    "fonteOficial": "https://www.planalto.gov.br/ccivil_03/decreto-lei/del1002.htm",
+    "ementa": "Código de Processo Penal Militar.",
+    "preambulo": [
+        {
+            "texto": "Os Ministros da Marinha de Guerra, do Exército e da Aeronáutica Militar , usando das atribuições que lhes confere o art. 3º do Ato Institucional nº 16, de 14 de outubro de 1969, combinado com o § 1º do art. 2º do Ato Institucional n° 5, de 13 de dezembro de 1968, decretam:",
+            "linha": 6
+        },
+        {
+            "texto": "CÓDIGO DE PROCESSO PENAL MILITAR",
+            "linha": 8
+        }
+    ],
+    "divisoes": [
+        {
+            "tipo": "livro",
+            "rotulo": "LIVRO I",
+            "linha": 10,
+            "divisoes": [
+                {
+                    "tipo": "titulo",
+                    "rotulo": "TÍTULO I",
+                    "linha": 12,
+                    "divisoes": [
+                        {
+                            "tipo": "capitulo",
+                            "rotulo": "CAPÍTULO ÚNICO",
+                            "titulo": "DA LEI DE PROCESSO PENAL MILITAR E DA SUA APLICAÇÃO",
+                            "linha": 14,
+                            "linhaTitulo": 16,
+                            "artigos": [
+                                {
+                                    "numero": "1º",
+                                    "rotulo": "Art. 1º",
+                                    "linha": 20,
+                                    "rubrica": "Fontes de Direito Judiciário Militar",
+                                    "linhaRubrica": 18,
+                                    "caput": "O processo penal militar reger-se-á pelas normas contidas neste Código, assim em tempo de paz como em tempo de guerra, salvo legislação especial que lhe fôr estritamente aplicável.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 24,
+                                            "rubrica": "Divergência de normas",
+                                            "linhaRubrica": 22,
+                                            "texto": "Nos casos concretos, se houver divergência entre essas normas e as de convenção ou tratado de que o Brasil seja signatário, prevalecerão as últimas."
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 28,
+                                            "rubrica": "Aplicação subsidiária",
+                                            "linhaRubrica": 26,
+                                            "texto": "Aplicam-se, subsidiàriamente, as normas dêste Código aos processos regulados em leis especiais."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "2º",
+                                    "rotulo": "Art. 2º",
+                                    "linha": 32,
+                                    "rubrica": "Interpretação literal",
+                                    "linhaRubrica": 30,
+                                    "caput": "A lei de processo penal militar deve ser interpretada no sentido literal de suas expressões. Os têrmos técnicos hão de ser entendidos em sua acepção especial, salvo se evidentemente empregados com outra significação.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 36,
+                                            "rubrica": "Interpretação extensiva ou restritiva",
+                                            "linhaRubrica": 34,
+                                            "texto": "Admitir-se-á a interpretação extensiva ou a interpretação restritiva, quando fôr manifesto, no primeiro caso, que a expressão da lei é mais estrita e, no segundo, que é mais ampla, do que sua intenção."
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 40,
+                                            "rubrica": "Casos de inadmissibilidade de interpretação não literal",
+                                            "linhaRubrica": 38,
+                                            "texto": "Não é, porém, admissível qualquer dessas interpretações, quando:",
+                                            "alineas": [
+                                                {
+                                                    "letra": "a",
+                                                    "rotulo": "a)",
+                                                    "linha": 42,
+                                                    "texto": "cercear a defesa pessoal do acusado;"
+                                                },
+                                                {
+                                                    "letra": "b",
+                                                    "rotulo": "b)",
+                                                    "linha": 44,
+                                                    "texto": "prejudicar ou alterar o curso normal do processo, ou lhe desvirtuar a natureza;"
+                                                },
+                                                {
+                                                    "letra": "c",
+                                                    "rotulo": "c)",
+                                                    "linha": 46,
+                                                    "texto": "desfigurar de plano os fundamentos da acusação que deram origem ao processo."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "3º",
+                                    "rotulo": "Art. 3º",
+                                    "linha": 50,
+                                    "rubrica": "Suprimento dos casos omissos",
+                                    "linhaRubrica": 48,
+                                    "caput": "Os casos omissos neste Código serão supridos:",
+                                    "alineas": [
+                                        {
+                                            "letra": "a",
+                                            "rotulo": "a)",
+                                            "linha": 52,
+                                            "texto": "pela legislação de processo penal comum, quando aplicável ao caso concreto e sem prejuízo da índole do processo penal militar;"
+                                        },
+                                        {
+                                            "letra": "b",
+                                            "rotulo": "b)",
+                                            "linha": 54,
+                                            "texto": "pela jurisprudência;"
+                                        },
+                                        {
+                                            "letra": "c",
+                                            "rotulo": "c)",
+                                            "linha": 56,
+                                            "texto": "pelos usos e costumes militares;"
+                                        },
+                                        {
+                                            "letra": "d",
+                                            "rotulo": "d)",
+                                            "linha": 58,
+                                            "texto": "pelos princípios gerais de Direito;"
+                                        },
+                                        {
+                                            "letra": "e",
+                                            "rotulo": "e)",
+                                            "linha": 60,
+                                            "texto": "pela analogia."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "4º",
+                                    "rotulo": "Art. 4º",
+                                    "linha": 64,
+                                    "rubrica": "Aplicação no espaço e no tempo",
+                                    "linhaRubrica": 62,
+                                    "caput": "Sem prejuízo de convenções, tratados e regras de direito internacional, aplicam-se as normas dêste Código:",
+                                    "incisos": [
+                                        {
+                                            "numero": "I",
+                                            "rotulo": "I",
+                                            "linha": 68,
+                                            "rubrica": "Tempo de paz",
+                                            "linhaRubrica": 66,
+                                            "texto": "em tempo de paz:",
+                                            "alineas": [
+                                                {
+                                                    "letra": "a",
+                                                    "rotulo": "a)",
+                                                    "linha": 70,
+                                                    "texto": "em todo o território nacional;"
+                                                },
+                                                {
+                                                    "letra": "b",
+                                                    "rotulo": "b)",
+                                                    "linha": 72,
+                                                    "texto": "fora do território nacional ou em lugar de extraterritorialidade brasileira, quando se tratar de crime que atente contra as instituições militares ou a segurança nacional, ainda que seja o agente processado ou tenha sido julgado pela justiça estrangeira;"
+                                                },
+                                                {
+                                                    "letra": "c",
+                                                    "rotulo": "c)",
+                                                    "linha": 74,
+                                                    "texto": "fora do território nacional, em zona ou lugar sob administração ou vigilância da fôrça militar brasileira, ou em ligação com esta, de fôrça militar estrangeira no cumprimento de missão de caráter internacional ou extraterritorial;"
+                                                },
+                                                {
+                                                    "letra": "d",
+                                                    "rotulo": "d)",
+                                                    "linha": 76,
+                                                    "texto": "a bordo de navios, ou quaisquer outras embarcações, e de aeronaves, onde quer que se encontrem, ainda que de propriedade privada, desde que estejam sob comando militar ou militarmente utilizados ou ocupados por ordem de autoridade militar competente;"
+                                                },
+                                                {
+                                                    "letra": "e",
+                                                    "rotulo": "e)",
+                                                    "linha": 78,
+                                                    "texto": "a bordo de aeronaves e navios estrangeiros desde que em lugar sujeito à administração militar, e a infração atente contra as instituições militares ou a segurança nacional;"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "numero": "II",
+                                            "rotulo": "II",
+                                            "linha": 82,
+                                            "rubrica": "Tempo de guerra",
+                                            "linhaRubrica": 80,
+                                            "texto": "em tempo de guerra:",
+                                            "alineas": [
+                                                {
+                                                    "letra": "a",
+                                                    "rotulo": "a)",
+                                                    "linha": 84,
+                                                    "texto": "aos mesmos casos previstos para o tempo de paz;"
+                                                },
+                                                {
+                                                    "letra": "b",
+                                                    "rotulo": "b)",
+                                                    "linha": 86,
+                                                    "texto": "em zona, espaço ou lugar onde se realizem operações de fôrça militar brasileira, ou estrangeira que lhe seja aliada, ou cuja defesa, proteção ou vigilância interesse à segurança nacional, ou ao bom êxito daquelas operações;"
+                                                },
+                                                {
+                                                    "letra": "c",
+                                                    "rotulo": "c)",
+                                                    "linha": 88,
+                                                    "texto": "em território estrangeiro militarmente ocupado."
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "5º",
+                                    "rotulo": "Art. 5º",
+                                    "linha": 92,
+                                    "rubrica": "Aplicação intertemporal",
+                                    "linhaRubrica": 90,
+                                    "caput": "As normas dêste Código aplicar-se-ão a partir da sua vigência, inclusive nos processos pendentes, ressalvados os casos previstos no art. 711, e sem prejuízo da validade dos atos realizados sob a vigência da lei anterior."
+                                },
+                                {
+                                    "numero": "6º",
+                                    "rotulo": "Art. 6º",
+                                    "linha": 96,
+                                    "rubrica": "Aplicação à Justiça Militar Estadual",
+                                    "linhaRubrica": 94,
+                                    "caput": "Obedecerão às normas processuais previstas neste Código, no que forem aplicáveis, salvo quanto à organização de Justiça, aos recursos e à execução de sentença, os processos da Justiça Militar Estadual, nos crimes previstos na Lei Penal Militar a que responderem os oficiais e praças das Polícias e dos Corpos de Bombeiros, Militares."
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tipo": "titulo",
+                    "rotulo": "TÍTULO II",
+                    "linha": 98,
+                    "divisoes": [
+                        {
+                            "tipo": "capitulo",
+                            "rotulo": "CAPÍTULO ÚNICO",
+                            "titulo": "DA POLÍCIA JUDICIÁRIA MILITAR",
+                            "linha": 100,
+                            "linhaTitulo": 102,
+                            "artigos": [
+                                {
+                                    "numero": "7º",
+                                    "rotulo": "Art. 7º",
+                                    "linha": 106,
+                                    "rubrica": "Exercício da polícia judiciária militar",
+                                    "linhaRubrica": 104,
+                                    "caput": "A polícia judiciária militar é exercida nos têrmos do art. 8º, pelas seguintes autoridades, conforme as respectivas jurisdições:",
+                                    "alineas": [
+                                        {
+                                            "letra": "a",
+                                            "rotulo": "a)",
+                                            "linha": 108,
+                                            "texto": "pelos ministros da Marinha, do Exército e da Aeronáutica, em todo o território nacional e fora dêle, em relação às fôrças e órgãos que constituem seus Ministérios, bem como a militares que, neste caráter, desempenhem missão oficial, permanente ou transitória, em país estrangeiro;"
+                                        },
+                                        {
+                                            "letra": "b",
+                                            "rotulo": "b)",
+                                            "linha": 110,
+                                            "texto": "pelo chefe do Estado-Maior das Fôrças Armadas, em relação a entidades que, por disposição legal, estejam sob sua jurisdição;"
+                                        },
+                                        {
+                                            "letra": "c",
+                                            "rotulo": "c)",
+                                            "linha": 112,
+                                            "texto": "pelos chefes de Estado-Maior e pelo secretário-geral da Marinha, nos órgãos, fôrças e unidades que lhes são subordinados;"
+                                        },
+                                        {
+                                            "letra": "d",
+                                            "rotulo": "d)",
+                                            "linha": 114,
+                                            "texto": "pelos comandantes de Exército e pelo comandante-chefe da Esquadra, nos órgãos, fôrças e unidades compreendidos no âmbito da respectiva ação de comando;"
+                                        },
+                                        {
+                                            "letra": "e",
+                                            "rotulo": "e)",
+                                            "linha": 116,
+                                            "texto": "pelos comandantes de Região Militar, Distrito Naval ou Zona Aérea, nos órgãos e unidades dos respectivos territórios;"
+                                        },
+                                        {
+                                            "letra": "f",
+                                            "rotulo": "f)",
+                                            "linha": 118,
+                                            "texto": "pelo secretário do Ministério do Exército e pelo chefe de Gabinete do Ministério da Aeronáutica, nos órgãos e serviços que lhes são subordinados;"
+                                        },
+                                        {
+                                            "letra": "g",
+                                            "rotulo": "g)",
+                                            "linha": 120,
+                                            "texto": "pelos diretores e chefes de órgãos, repartições, estabelecimentos ou serviços previstos nas leis de organização básica da Marinha, do Exército e da Aeronáutica;"
+                                        },
+                                        {
+                                            "letra": "h",
+                                            "rotulo": "h)",
+                                            "linha": 122,
+                                            "texto": "pelos comandantes de fôrças, unidades ou navios;"
+                                        }
+                                    ],
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 126,
+                                            "rubrica": "Delegação do exercício",
+                                            "linhaRubrica": 124,
+                                            "texto": "Obedecidas as normas regulamentares de jurisdição, hierarquia e comando, as atribuições enumeradas neste artigo poderão ser delegadas a oficiais da ativa, para fins especificados e por tempo limitado."
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 128,
+                                            "texto": "Em se tratando de delegação para instauração de inquérito policial militar, deverá aquela recair em oficial de pôsto superior ao do indiciado, seja êste oficial da ativa, da reserva, remunerada ou não, ou reformado."
+                                        },
+                                        {
+                                            "numero": "3º",
+                                            "rotulo": "§ 3º",
+                                            "linha": 130,
+                                            "texto": "Não sendo possível a designação de oficial de pôsto superior ao do indiciado, poderá ser feita a de oficial do mesmo pôsto, desde que mais antigo."
+                                        },
+                                        {
+                                            "numero": "4º",
+                                            "rotulo": "§ 4º",
+                                            "linha": 132,
+                                            "texto": "Se o indiciado é oficial da reserva ou reformado, não prevalece, para a delegação, a antiguidade de pôsto."
+                                        },
+                                        {
+                                            "numero": "5º",
+                                            "rotulo": "§ 5º",
+                                            "linha": 136,
+                                            "rubrica": "Designação de delegado e avocamento de inquérito pelo ministro",
+                                            "linhaRubrica": 134,
+                                            "texto": "Se o pôsto e a antiguidade de oficial da ativa excluírem, de modo absoluto, a existência de outro oficial da ativa nas condições do § 3º, caberá ao ministro competente a designação de oficial da reserva de pôsto mais elevado para a instauração do inquérito policial militar; e, se êste estiver iniciado, avocá-lo, para tomar essa providência."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "8º",
+                                    "rotulo": "Art. 8º",
+                                    "linha": 140,
+                                    "rubrica": "Competência da polícia judiciária militar",
+                                    "linhaRubrica": 138,
+                                    "caput": "Compete à Polícia judiciária militar:",
+                                    "alineas": [
+                                        {
+                                            "letra": "a",
+                                            "rotulo": "a)",
+                                            "linha": 142,
+                                            "texto": "apurar os crimes militares, bem como os que, por lei especial, estão sujeitos à jurisdição militar, e sua autoria;"
+                                        },
+                                        {
+                                            "letra": "b",
+                                            "rotulo": "b)",
+                                            "linha": 144,
+                                            "texto": "prestar aos órgãos e juízes da Justiça Militar e aos membros do Ministério Público as informações necessárias à instrução e julgamento dos processos, bem como realizar as diligências que por êles lhe forem requisitadas;"
+                                        },
+                                        {
+                                            "letra": "c",
+                                            "rotulo": "c)",
+                                            "linha": 146,
+                                            "texto": "cumprir os mandados de prisão expedidos pela Justiça Militar;"
+                                        },
+                                        {
+                                            "letra": "d",
+                                            "rotulo": "d)",
+                                            "linha": 148,
+                                            "texto": "representar a autoridades judiciárias militares acêrca da prisão preventiva e da insanidade mental do indiciado;"
+                                        },
+                                        {
+                                            "letra": "e",
+                                            "rotulo": "e)",
+                                            "linha": 150,
+                                            "texto": "cumprir as determinações da Justiça Militar relativas aos presos sob sua guarda e responsabilidade, bem como as demais prescrições dêste Código, nesse sentido;"
+                                        },
+                                        {
+                                            "letra": "f",
+                                            "rotulo": "f)",
+                                            "linha": 152,
+                                            "texto": "solicitar das autoridades civis as informações e medidas que julgar úteis à elucidação das infrações penais, que esteja a seu cargo;"
+                                        },
+                                        {
+                                            "letra": "g",
+                                            "rotulo": "g)",
+                                            "linha": 154,
+                                            "texto": "requisitar da polícia civil e das repartições técnicas civis as pesquisas e exames necessários ao complemento e subsídio de inquérito policial militar;"
+                                        },
+                                        {
+                                            "letra": "h",
+                                            "rotulo": "h)",
+                                            "linha": 156,
+                                            "texto": "atender, com observância dos regulamentos militares, a pedido de apresentação de militar ou funcionário de repartição militar à autoridade civil competente, desde que legal e fundamentado o pedido."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "tipo": "titulo",
+                    "rotulo": "TÍTULO III",
+                    "linha": 158,
+                    "divisoes": [
+                        {
+                            "tipo": "capitulo",
+                            "rotulo": "CAPÍTULO ÚNICO",
+                            "titulo": "DO INQUÉRITO POLICIAL MILITAR",
+                            "linha": 160,
+                            "linhaTitulo": 162,
+                            "artigos": [
+                                {
+                                    "numero": "9º",
+                                    "rotulo": "Art. 9º",
+                                    "linha": 166,
+                                    "rubrica": "Finalidade do inquérito",
+                                    "linhaRubrica": 164,
+                                    "caput": "O inquérito policial militar é a apuração sumária de fato, que, nos têrmos legais, configure crime militar, e de sua autoria. Tem o caráter de instrução provisória, cuja finalidade precípua é a de ministrar elementos necessários à propositura da ação penal.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "único",
+                                            "rotulo": "Parágrafo único",
+                                            "linha": 168,
+                                            "texto": "São, porém, efetivamente instrutórios da ação penal os exames, perícias e avaliações realizados regularmente no curso do inquérito, por peritos idôneos e com obediência às formalidades previstas neste Código."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "10",
+                                    "rotulo": "Art. 10.",
+                                    "linha": 172,
+                                    "rubrica": "Modos por que pode ser iniciado",
+                                    "linhaRubrica": 170,
+                                    "caput": "O inquérito é iniciado mediante portaria:",
+                                    "alineas": [
+                                        {
+                                            "letra": "a",
+                                            "rotulo": "a)",
+                                            "linha": 174,
+                                            "texto": "de ofício, pela autoridade militar em cujo âmbito de jurisdição ou comando haja ocorrido a infração penal, atendida a hierarquia do infrator;"
+                                        },
+                                        {
+                                            "letra": "b",
+                                            "rotulo": "b)",
+                                            "linha": 176,
+                                            "texto": "por determinação ou delegação da autoridade militar superior, que, em caso de urgência, poderá ser feita por via telegráfica ou radiotelefônica e confirmada, posteriormente, por ofício;"
+                                        },
+                                        {
+                                            "letra": "c",
+                                            "rotulo": "c)",
+                                            "linha": 178,
+                                            "texto": "em virtude de requisição do Ministério Público;"
+                                        },
+                                        {
+                                            "letra": "d",
+                                            "rotulo": "d)",
+                                            "linha": 180,
+                                            "texto": "por decisão do Superior Tribunal Militar, nos têrmos do art. 25;"
+                                        },
+                                        {
+                                            "letra": "e",
+                                            "rotulo": "e)",
+                                            "linha": 182,
+                                            "texto": "a requerimento da parte ofendida ou de quem legalmente a represente, ou em virtude de representação devidamente autorizada de quem tenha conhecimento de infração penal, cuja repressão caiba à Justiça Militar;"
+                                        },
+                                        {
+                                            "letra": "f",
+                                            "rotulo": "f)",
+                                            "linha": 184,
+                                            "texto": "quando, de sindicância feita em âmbito de jurisdição militar, resulte indício da existência de infração penal militar."
+                                        }
+                                    ],
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 188,
+                                            "rubrica": "Superioridade ou igualdade de pôsto do infrator",
+                                            "linhaRubrica": 186,
+                                            "texto": "Tendo o infrator pôsto superior ou igual ao do comandante, diretor ou chefe de órgão ou serviço, em cujo âmbito de jurisdição militar haja ocorrido a infração penal, será feita a comunicação do fato à autoridade superior competente, para que esta torne efetiva a delegação, nos têrmos do § 2° do art. 7º."
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 192,
+                                            "rubrica": "Providências antes do inquérito",
+                                            "linhaRubrica": 190,
+                                            "texto": "O aguardamento da delegação não obsta que o oficial responsável por comando, direção ou chefia, ou aquêle que o substitua ou esteja de dia, de serviço ou de quarto, tome ou determine que sejam tomadas imediatamente as providências cabíveis, previstas no art. 12, uma vez que tenha conhecimento de infração penal que lhe incumba reprimir ou evitar."
+                                        },
+                                        {
+                                            "numero": "3º",
+                                            "rotulo": "§ 3º",
+                                            "linha": 196,
+                                            "rubrica": "Infração de natureza não militar",
+                                            "linhaRubrica": 194,
+                                            "texto": "Se a infração penal não fôr, evidentemente, de natureza militar, comunicará o fato à autoridade policial competente, a quem fará apresentar o infrator. Em se tratando de civil, menor de dezoito anos, a apresentação será feita ao Juiz de Menores."
+                                        },
+                                        {
+                                            "numero": "4º",
+                                            "rotulo": "§ 4º",
+                                            "linha": 200,
+                                            "rubrica": "Oficial general como infrator",
+                                            "linhaRubrica": 198,
+                                            "texto": "Se o infrator fôr oficial general, será sempre comunicado o fato ao ministro e ao chefe de Estado-Maior competentes, obedecidos os trâmites regulamentares."
+                                        },
+                                        {
+                                            "numero": "5º",
+                                            "rotulo": "§ 5º",
+                                            "linha": 204,
+                                            "rubrica": "Indícios contra oficial de pôsto superior ou mais antigo no curso do inquérito",
+                                            "linhaRubrica": 202,
+                                            "texto": "Se, no curso do inquérito, o seu encarregado verificar a existência de indícios contra oficial de pôsto superior ao seu, ou mais antigo, tomará as providências necessárias para que as suas funções sejam delegadas a outro oficial, nos têrmos do § 2° do art. 7º."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "11",
+                                    "rotulo": "Art. 11.",
+                                    "linha": 208,
+                                    "rubrica": "Escrivão do inquérito",
+                                    "linhaRubrica": 206,
+                                    "caput": "A designação de escrivão para o inquérito caberá ao respectivo encarregado, se não tiver sido feita pela autoridade que lhe deu delegação para aquêle fim, recaindo em segundo ou primeiro-tenente, se o indiciado fôr oficial, e em sargento, subtenente ou suboficial, nos demais casos.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "único",
+                                            "rotulo": "Parágrafo único",
+                                            "linha": 212,
+                                            "rubrica": "Compromisso legal",
+                                            "linhaRubrica": 210,
+                                            "texto": "O escrivão prestará compromisso de manter o sigilo do inquérito e de cumprir fielmente as determinações dêste Código, no exercício da função."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "12",
+                                    "rotulo": "Art. 12.",
+                                    "linha": 216,
+                                    "rubrica": "Medidas preliminares ao inquérito",
+                                    "linhaRubrica": 214,
+                                    "caput": "Logo que tiver conhecimento da prática de infração penal militar, verificável na ocasião, a autoridade a que se refere o § 2º do art. 10 deverá, se possível:",
+                                    "alineas": [
+                                        {
+                                            "letra": "a",
+                                            "rotulo": "a)",
+                                            "linha": 218,
+                                            "texto": "dirigir-se ao local, providenciando para que se não alterem o estado e a situação das coisas, enquanto necessário;        (Vide Lei nº 6.174, de 1974)"
+                                        },
+                                        {
+                                            "letra": "b",
+                                            "rotulo": "b)",
+                                            "linha": 220,
+                                            "texto": "apreender os instrumentos e todos os objetos que tenham relação com o fato;"
+                                        },
+                                        {
+                                            "letra": "c",
+                                            "rotulo": "c)",
+                                            "linha": 222,
+                                            "texto": "efetuar a prisão do infrator, observado o disposto no art. 244;"
+                                        },
+                                        {
+                                            "letra": "d",
+                                            "rotulo": "d)",
+                                            "linha": 224,
+                                            "texto": "colhêr tôdas as provas que sirvam para o esclarecimento do fato e suas circunstâncias."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "13",
+                                    "rotulo": "Art. 13.",
+                                    "linha": 228,
+                                    "rubrica": "Formação do inquérito",
+                                    "linhaRubrica": 226,
+                                    "caput": "O encarregado do inquérito deverá, para a formação dêste:",
+                                    "alineas": [
+                                        {
+                                            "letra": "a",
+                                            "rotulo": "a)",
+                                            "linha": 232,
+                                            "rubrica": "Atribuição do seu encarregado",
+                                            "linhaRubrica": 230,
+                                            "texto": "tomar as medidas previstas no art. 12, se ainda não o tiverem sido;"
+                                        },
+                                        {
+                                            "letra": "b",
+                                            "rotulo": "b)",
+                                            "linha": 234,
+                                            "texto": "ouvir o ofendido;"
+                                        },
+                                        {
+                                            "letra": "c",
+                                            "rotulo": "c)",
+                                            "linha": 236,
+                                            "texto": "ouvir o indiciado;"
+                                        },
+                                        {
+                                            "letra": "d",
+                                            "rotulo": "d)",
+                                            "linha": 238,
+                                            "texto": "ouvir testemunhas;"
+                                        },
+                                        {
+                                            "letra": "e",
+                                            "rotulo": "e)",
+                                            "linha": 240,
+                                            "texto": "proceder a reconhecimento de pessoas e coisas, e acareações;"
+                                        },
+                                        {
+                                            "letra": "f",
+                                            "rotulo": "f)",
+                                            "linha": 242,
+                                            "texto": "determinar, se fôr o caso, que se proceda a exame de corpo de delito e a quaisquer outros exames e perícias;"
+                                        },
+                                        {
+                                            "letra": "g",
+                                            "rotulo": "g)",
+                                            "linha": 244,
+                                            "texto": "determinar a avaliação e identificação da coisa subtraída, desviada, destruída ou danificada, ou da qual houve indébita apropriação;"
+                                        },
+                                        {
+                                            "letra": "h",
+                                            "rotulo": "h)",
+                                            "linha": 246,
+                                            "texto": "proceder a buscas e apreensões, nos têrmos dos arts. 172 a 184 e 185 a 189;"
+                                        },
+                                        {
+                                            "letra": "i",
+                                            "rotulo": "i)",
+                                            "linha": 248,
+                                            "texto": "tomar as medidas necessárias destinadas à proteção de testemunhas, peritos ou do ofendido, quando coactos ou ameaçados de coação que lhes tolha a liberdade de depor, ou a independência para a realização de perícias ou exames."
+                                        }
+                                    ],
+                                    "paragrafos": [
+                                        {
+                                            "numero": "único",
+                                            "rotulo": "Parágrafo único",
+                                            "linha": 252,
+                                            "rubrica": "Reconstituição dos fatos",
+                                            "linhaRubrica": 250,
+                                            "texto": "Para verificar a possibilidade de haver sido a infração praticada de determinado modo, o encarregado do inquérito poderá proceder à reprodução simulada dos fatos, desde que esta não contrarie a moralidade ou a ordem pública, nem atente contra a hierarquia ou a disciplina militar."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "14",
+                                    "rotulo": "Art. 14.",
+                                    "linha": 256,
+                                    "rubrica": "Assistência de procurador",
+                                    "linhaRubrica": 254,
+                                    "caput": "Em se tratando da apuração de fato delituoso de excepcional importância ou de difícil elucidação, o encarregado do inquérito poderá solicitar do procurador-geral a indicação de procurador que lhe dê assistência."
+                                },
+                                {
+                                    "numero": "15",
+                                    "rotulo": "Art. 15.",
+                                    "linha": 260,
+                                    "rubrica": "Encarregado de inquérito. Requisitos",
+                                    "linhaRubrica": 258,
+                                    "caput": "Será encarregado do inquérito, sempre que possível, oficial de pôsto não inferior ao de capitão ou capitão-tenente; e, em se tratando de infração penal contra a segurança nacional, sê-lo-á, sempre que possível, oficial superior, atendida, em cada caso, a sua hierarquia, se oficial o indiciado."
+                                },
+                                {
+                                    "numero": "16",
+                                    "rotulo": "Art. 16.",
+                                    "linha": 264,
+                                    "rubrica": "Sigilo do inquérito",
+                                    "linhaRubrica": 262,
+                                    "caput": "O inquérito é sigiloso, mas seu encarregado pode permitir que dêle tome conhecimento o advogado do indiciado."
+                                },
+                                {
+                                    "numero": "16-A",
+                                    "rotulo": "Art. 16-A.",
+                                    "linha": 266,
+                                    "caput": "Nos casos em que servidores das polícias militares e dos corpos de bombeiros militares figurarem como investigados em inquéritos policiais militares e demais procedimentos extrajudiciais, cujo objeto for a investigação de fatos relacionados ao uso da força letal praticados no exercício profissional, de forma consumada ou tentada, incluindo as situações dispostas nos arts. 42 a 47 do Decreto-Lei nº 1.001, de 21 de outubro de 1969 (Código Penal Militar), o indiciado poderá constituir defensor.       (Incluído pela Lei nº 13.964, de 2019)",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 268,
+                                            "texto": "Para os casos previstos no caput deste artigo, o investigado deverá ser citado da instauração do procedimento investigatório, podendo constituir defensor no prazo de até 48 (quarenta e oito) horas a contar do recebimento da citação.       (Incluído pela Lei nº 13.964, de 2019)"
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 270,
+                                            "texto": "Esgotado o prazo disposto no § 1º com ausência de nomeação de defensor pelo investigado, a autoridade responsável pela investigação deverá intimar a instituição a que estava vinculado o investigado à época da ocorrência dos fatos, para que esta, no prazo de 48 (quarenta e oito) horas, indique defensor para a representação do investigado.       (Incluído pela Lei nº 13.964, de 2019)"
+                                        },
+                                        {
+                                            "numero": "3º",
+                                            "rotulo": "§ 3º",
+                                            "linha": 275,
+                                            "texto": "Havendo necessidade de indicação de defensor nos termos do § 2º deste artigo, a defesa caberá preferencialmente à Defensoria Pública e, nos locais em que ela não estiver instalada, a União ou a Unidade da Federação correspondente à respectiva competência territorial do procedimento instaurado deverá disponibilizar profissional para acompanhamento e realização de todos os atos relacionados à defesa administrativa do investigado.         (Incluído pela Lei nº 13.964, de 2019)       (Vigência)"
+                                        },
+                                        {
+                                            "numero": "4º",
+                                            "rotulo": "§ 4º",
+                                            "linha": 277,
+                                            "texto": "A indicação do profissional a que se refere o § 3º deste artigo deverá ser precedida de manifestação de que não existe defensor público lotado na área territorial onde tramita o inquérito e com atribuição para nele atuar, hipótese em que poderá ser indicado profissional que não integre os quadros próprios da Administração.          (Incluído pela Lei nº 13.964, de 2019)       (Vigência)"
+                                        },
+                                        {
+                                            "numero": "5º",
+                                            "rotulo": "§ 5º",
+                                            "linha": 279,
+                                            "texto": "Na hipótese de não atuação da Defensoria Pública, os custos com o patrocínio dos interesses do investigado nos procedimentos de que trata esse artigo correrão por conta do orçamento próprio da instituição a que este esteja vinculado à época da ocorrência dos fatos investigados.         (Incluído pela Lei nº 13.964, de 2019)       (Vigência)"
+                                        },
+                                        {
+                                            "numero": "6º",
+                                            "rotulo": "§ 6º",
+                                            "linha": 281,
+                                            "texto": "As disposições constantes deste artigo aplicam-se aos servidores militares vinculados às instituições dispostas no art. 142 da Constituição Federal, desde que os fatos investigados digam respeito a missões para a Garantia da Lei e da Ordem.     (Incluído pela Lei nº 13.964, de 2019)"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "17",
+                                    "rotulo": "Art. 17.",
+                                    "linha": 285,
+                                    "rubrica": "Incomunicabilidade do indiciado. Prazo.",
+                                    "linhaRubrica": 283,
+                                    "caput": "O encarregado do inquérito poderá manter incomunicável o indiciado, que estiver legalmente prêso, por três dias no máximo."
+                                },
+                                {
+                                    "numero": "18",
+                                    "rotulo": "Art. 18.",
+                                    "linha": 289,
+                                    "rubrica": "Detenção de indiciado",
+                                    "linhaRubrica": 287,
+                                    "caput": "Independentemente de flagrante delito, o indiciado poderá ficar detido, durante as investigações policiais, até trinta dias, comunicando-se a detenção à autoridade judiciária competente. Êsse prazo poderá ser prorrogado, por mais vinte dias, pelo comandante da Região, Distrito Naval ou Zona Aérea, mediante solicitação fundamentada do encarregado do inquérito e por via hierárquica.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "único",
+                                            "rotulo": "Parágrafo único",
+                                            "linha": 293,
+                                            "rubrica": "Prisão preventiva e menagem. Solicitação",
+                                            "linhaRubrica": 291,
+                                            "texto": "Se entender necessário, o encarregado do inquérito solicitará, dentro do mesmo prazo ou sua prorrogação, justificando-a, a decretação da prisão preventiva ou de menagem, do indiciado."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "19",
+                                    "rotulo": "Art. 19.",
+                                    "linha": 297,
+                                    "rubrica": "Inquirição durante o dia",
+                                    "linhaRubrica": 295,
+                                    "caput": "As testemunhas e o indiciado, exceto caso de urgência inadiável, que constará da respectiva assentada, devem ser ouvidos durante o dia, em período que medeie entre as sete e as dezoito horas.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 301,
+                                            "rubrica": "Inquirição. Assentada de início, interrupção e encerramento",
+                                            "linhaRubrica": 299,
+                                            "texto": "O escrivão lavrará assentada do dia e hora do início das inquirições ou depoimentos; e, da mesma forma, do seu encerramento ou interrupções, no final daquele período."
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 305,
+                                            "rubrica": "Inquirição. Limite de tempo",
+                                            "linhaRubrica": 303,
+                                            "texto": "A testemunha não será inquirida por mais de quatro horas consecutivas, sendo-lhe facultado o descanso de meia hora, sempre que tiver de prestar declarações além daquele têrmo. O depoimento que não ficar concluído às dezoito horas será encerrado, para prosseguir no dia seguinte, em hora determinada pelo encarregado do inquérito."
+                                        },
+                                        {
+                                            "numero": "3º",
+                                            "rotulo": "§ 3º",
+                                            "linha": 307,
+                                            "texto": "Não sendo útil o dia seguinte, a inquirição poderá ser adiada para o primeiro dia que o fôr, salvo caso de urgência."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "20",
+                                    "rotulo": "Art. 20.",
+                                    "linha": 311,
+                                    "rubrica": "Prazos para terminação do inquérito",
+                                    "linhaRubrica": 309,
+                                    "caput": "O inquérito deverá terminar dentro em vinte dias, se o indiciado estiver prêso, contado esse prazo a partir do dia em que se executar a ordem de prisão; ou no prazo de quarenta dias, quando o indiciado estiver sôlto, contados a partir da data em que se instaurar o inquérito.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 315,
+                                            "rubrica": "Prorrogação de prazo",
+                                            "linhaRubrica": 313,
+                                            "texto": "Êste último prazo poderá ser prorrogado por mais vinte dias pela autoridade militar superior, desde que não estejam concluídos exames ou perícias já iniciados, ou haja necessidade de diligência, indispensáveis à elucidação do fato. O pedido de prorrogação deve ser feito em tempo oportuno, de modo a ser atendido antes da terminação do prazo."
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 319,
+                                            "rubrica": "Diligências não concluídas até o inquérito",
+                                            "linhaRubrica": 317,
+                                            "texto": "Não haverá mais prorrogação, além da prevista no § 1º, salvo dificuldade insuperável, a juízo do ministro de Estado competente. Os laudos de perícias ou exames não concluídos nessa prorrogação, bem como os documentos colhidos depois dela, serão posteriormente remetidos ao juiz, para a juntada ao processo. Ainda, no seu relatório, poderá o encarregado do inquérito indicar, mencionando, se possível, o lugar onde se encontram as testemunhas que deixaram de ser ouvidas, por qualquer impedimento."
+                                        },
+                                        {
+                                            "numero": "3º",
+                                            "rotulo": "§ 3º",
+                                            "linha": 323,
+                                            "rubrica": "Dedução em favor dos prazos",
+                                            "linhaRubrica": 321,
+                                            "texto": "São deduzidas dos prazos referidos neste artigo as interrupções pelo motivo previsto no § 5º do art. 10."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "21",
+                                    "rotulo": "Art. 21.",
+                                    "linha": 327,
+                                    "rubrica": "Reunião e ordem das peças de inquérito",
+                                    "linhaRubrica": 325,
+                                    "caput": "Tôdas as peças do inquérito serão, por ordem cronológica, reunidas num só processado e dactilografadas, em espaço dois, com as fôlhas numeradas e rubricadas, pelo escrivão.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "único",
+                                            "rotulo": "Parágrafo único",
+                                            "linha": 331,
+                                            "rubrica": "Juntada de documento",
+                                            "linhaRubrica": 329,
+                                            "texto": "De cada documento junto, a que precederá despacho do encarregado do inquérito, o escrivão lavrará o respectivo têrmo, mencionando a data."
+                                        }
+                                    ]
+                                },
+                                {
+                                    "numero": "22",
+                                    "rotulo": "Art. 22.",
+                                    "linha": 335,
+                                    "rubrica": "Relatório",
+                                    "linhaRubrica": 333,
+                                    "caput": "O inquérito será encerrado com minucioso relatório, em que o seu encarregado mencionará as diligências feitas, as pessoas ouvidas e os resultados obtidos, com indicação do dia, hora e lugar onde ocorreu o fato delituoso. Em conclusão, dirá se há infração disciplinar a punir ou indício de crime, pronunciando-se, neste último caso, justificadamente, sôbre a conveniência da prisão preventiva do indiciado, nos têrmos legais.",
+                                    "paragrafos": [
+                                        {
+                                            "numero": "1º",
+                                            "rotulo": "§ 1º",
+                                            "linha": 339,
+                                            "rubrica": "Solução",
+                                            "linhaRubrica": 337,
+                                            "texto": "No caso de ter sido delegada a atribuição para a abertura do inquérito, o seu encarregado enviá-lo-á à autoridade de que recebeu a delegação, para que lhe homologue ou não a solução, aplique penalidade, no caso de ter sido apurada infração disciplinar, ou determine novas diligências, se as julgar necessárias."
+                                        },
+                                        {
+                                            "numero": "2º",
+                                            "rotulo": "§ 2º",
+                                            "linha": 343,
+                                            "rubrica": "Advocação",
+                                            "linhaRubrica": 341,
+                                            "texto": "Discordando da solução dada ao inquérito, a autoridade que o delegou poderá avocá-lo e dar solução diferente."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

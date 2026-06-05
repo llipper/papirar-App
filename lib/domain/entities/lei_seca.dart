@@ -1,0 +1,1 @@
+export 'package:papirar/domain/entities/lei_texto.dart';
