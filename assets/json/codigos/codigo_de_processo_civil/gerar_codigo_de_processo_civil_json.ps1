@@ -173,8 +173,8 @@ while ($i -lt $totalLines) {
 
     if ([string]::IsNullOrWhiteSpace($trim)) { $i++; continue }
 
-    # Fecho oficial - paramos aqui para ignorar o sumário duplicado no final do arquivo
-    if ($trim -like 'Brasília, 10 de janeiro de 2002*') {
+    # Fecho oficial - paramos aqui para ignorar o sumário duplicado / notas finais no arquivo
+    if ($trim -like '*Brasília*2015*') {
         $fecho = [ordered]@{ texto = $trim; linha = $ln }
         break
     }

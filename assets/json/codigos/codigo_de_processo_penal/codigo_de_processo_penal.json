@@ -1181,12 +1181,7 @@
                     "linha": 350,
                     "caput": "Se o ofendido for menor de 21 e maior de 18 anos, o direito de queixa poderá ser exercido por ele ou por seu representante legal."
                 },
-                {
-                    "numero": "35º",
-                    "rotulo": "Art. 35º.",
-                    "linha": 353,
-                    "caput": ""
-                },
+
                 {
                     "numero": "36º",
                     "rotulo": "Art. 36º.",
@@ -9863,133 +9858,13 @@
                             "numero": "319º",
                             "rotulo": "Art. 319º.",
                             "linha": 2128,
-                            "caput": "São medidas cautelares diversas da prisão: .",
+                            "caput": "São medidas cautelares diversas da prisão:",
                             "paragrafos": [
-                                {
-                                    "numero": "1º",
-                                    "rotulo": "§ 1º",
-                                    "linha": 2148,
-                                    "texto": ""
-                                },
-                                {
-                                    "numero": "2º",
-                                    "rotulo": "§ 2º",
-                                    "linha": 2150,
-                                    "texto": ""
-                                },
-                                {
-                                    "numero": "3º",
-                                    "rotulo": "§ 3º",
-                                    "linha": 2152,
-                                    "texto": ".",
-                                    "links": [
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2007-2010/2008/Lei/L11719.htm#art3",
-                                            "inicio": 0,
-                                            "fim": 1
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2007-2010/2008/Lei/L11719.htm#art1",
-                                            "inicio": 0,
-                                            "fim": 1
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2004-2006/2006/Lei/L11435.htm#art2",
-                                            "inicio": 0,
-                                            "fim": 1
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2011-2014/2011/Lei/L12403.htm#art1",
-                                            "inicio": 0,
-                                            "fim": 1
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2011-2014/2011/Lei/L12403.htm#art2",
-                                            "inicio": 0,
-                                            "fim": 1
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2011-2014/2011/Lei/L12403.htm#art4",
-                                            "inicio": 0,
-                                            "fim": 1
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2015-2018/2018/Lei/L13769.htm#art2",
-                                            "inicio": 0,
-                                            "fim": 1
-                                        }
-                                    ]
-                                },
                                 {
                                     "numero": "4º",
                                     "rotulo": "§ 4º",
                                     "linha": 2154,
-                                    "texto": "A fiança será aplicada de acordo com as disposições do Capítulo VI deste Título, podendo ser cumulada com outras medidas cautelares. .",
-                                    "links": [
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2007-2010/2008/Lei/L11719.htm#art3",
-                                            "inicio": 133,
-                                            "fim": 134
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2007-2010/2008/Lei/L11719.htm#art1",
-                                            "inicio": 133,
-                                            "fim": 134
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2004-2006/2006/Lei/L11435.htm#art2",
-                                            "inicio": 133,
-                                            "fim": 134
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2011-2014/2011/Lei/L12403.htm#art1",
-                                            "inicio": 133,
-                                            "fim": 134
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2011-2014/2011/Lei/L12403.htm#art2",
-                                            "inicio": 133,
-                                            "fim": 134
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2011-2014/2011/Lei/L12403.htm#art4",
-                                            "inicio": 133,
-                                            "fim": 134
-                                        },
-                                        {
-                                            "campo": "texto",
-                                            "texto": ".",
-                                            "href": "../_Ato2015-2018/2018/Lei/L13769.htm#art2",
-                                            "inicio": 133,
-                                            "fim": 134
-                                        }
-                                    ]
+                                    "texto": "A fiança será aplicada de acordo com as disposições do Capítulo VI deste Título, podendo ser cumulada com outras medidas cautelares."
                                 }
                             ],
                             "incisos": [
@@ -11921,32 +11796,7 @@
                                         }
                                     ]
                                 },
-                                {
-                                    "numero": "2º",
-                                    "rotulo": "§ 2º",
-                                    "linha": 2246,
-                                    "texto": "",
-                                    "incisos": [
-                                        {
-                                            "numero": "I",
-                                            "rotulo": "I",
-                                            "linha": 2248,
-                                            "texto": ".",
-                                            "links": [
-                                                {
-                                                    "campo": "texto",
-                                                    "texto": ".",
-                                                    "href": "../_Ato2007-2010/2008/Lei/L11719.htm#art3",
-                                                    "inicio": 0,
-                                                    "fim": 1
-                                                },
-                                                {
-                                                    "campo": "texto",
-                                                    "texto": ".",
-                                                    "href": "../_Ato2007-2010/2008/Lei/L11719.htm#art1",
-                                                    "inicio": 0,
-                                                    "fim": 1
-                                                },
+
                                                 {
                                                     "campo": "texto",
                                                     "texto": ".",
@@ -21882,12 +21732,7 @@
                                             "linha": 4029,
                                             "texto": "que conceder, negar, arbitrar, cassar ou julgar inidônea a fiança, indeferir requerimento de prisão preventiva ou revogá-la, conceder liberdade provisória ou relaxar a prisão em flagrante;"
                                         },
-                                        {
-                                            "numero": "VI",
-                                            "rotulo": "VI",
-                                            "linha": 4031,
-                                            "texto": ""
-                                        },
+
                                         {
                                             "numero": "VII",
                                             "rotulo": "VII",
@@ -22647,12 +22492,7 @@
                                         }
                                     ]
                                 },
-                                {
-                                    "numero": "611º",
-                                    "rotulo": "Art. 611º.",
-                                    "linha": 4213,
-                                    "caput": ""
-                                },
+
                                 {
                                     "numero": "612º",
                                     "rotulo": "Art. 612º.",

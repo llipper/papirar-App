@@ -239,7 +239,10 @@ while ($i -lt $totalLines) {
         # Normaliza "o"/"O" para "º" em números de artigo (ex: 1o → 1º, 3o-A → 3º-A)
         $num = $num -replace '([0-9]+)[oO](?=$|-)', '$1º'
         # Força º no final de TODO artigo (usuário quer em todos: 10º, 100º, 1.072º, 3º-A etc.)
-        $num = $num -replace '(\d+)(º)?(-[A-Z])?$', '$1º$3'
+        # Preserva numeração com ponto decimal para artigos 1.000+ (1.014, 1.072 etc.) - evita "1º" + "014." poluído
+        if ($num -notmatch '\.') {
+            $num = $num -replace '(\d+)(º)?(-[A-Z])?$', '$1º$3'
+        }
         $rot = "Art. $num."
 
         # Captura caput (pode continuar em linhas seguintes que não sejam marcadores)

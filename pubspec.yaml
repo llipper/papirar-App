@@ -69,14 +69,22 @@ flutter:
     - assets/json/codigos/codigo_de_processo_penal_militar/codigo_de_processo_penal_militar.json
     - assets/json/codigos/codigo_de_transito_brasileiro/codigo_de_transito_brasileiro.json
     - assets/json/codigos/codigo_penal/codigo_penal.json
+    - assets/json/codigos/codigo_penal/codigo_penal_audio.json
     - assets/json/codigos/codigo_penal_militar/codigo_penal_militar.json
     - assets/json/constituicao/constituicao_federal_de_1988/constituicao_federal_de_1988.json
+    - assets/json/constituicao/constituicao_federal_de_1988/constituicao_federal_de_1988_audio.json
     - assets/json/estatutos/estatuto_da_crianca_e_do_adolescente/estatuto_da_crianca_e_do_adolescente.json
+    - assets/json/estatutos/estatuto_da_crianca_e_do_adolescente/estatuto_da_crianca_e_do_adolescente_audio.json
     - assets/json/estatutos/estatuto_da_igualdade_racial/estatuto_da_igualdade_racial.json
+    - assets/json/estatutos/estatuto_da_igualdade_racial/estatuto_da_igualdade_racial_audio.json
     - assets/json/estatutos/estatuto_da_pessoa_com_deficiencia/estatuto_da_pessoa_com_deficiencia.json
+    - assets/json/estatutos/estatuto_da_pessoa_com_deficiencia/estatuto_da_pessoa_com_deficiencia_audio.json
     - assets/json/estatutos/estatuto_do_desarmamento/estatuto_do_desarmamento.json
+    - assets/json/estatutos/estatuto_do_desarmamento/estatuto_do_desarmamento_audio.json
     - assets/json/estatutos/estatuto_do_idoso/estatuto_do_idoso.json
+    - assets/json/estatutos/estatuto_do_idoso/estatuto_do_idoso_audio.json
     - assets/json/estatutos/estatuto_dos_militares/estatuto_dos_militares.json
+    - assets/json/estatutos/estatuto_dos_militares/estatuto_dos_militares_audio.json
     - assets/json/leis/lei_11340_maria_da_penha/lei_11340_maria_da_penha.json
     - assets/json/leis/lei_11343_drogas/lei_11343_drogas.json
     - assets/json/leis/lei_12527_acesso_a_informacao/lei_12527_acesso_a_informacao.json
