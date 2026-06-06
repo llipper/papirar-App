@@ -11,6 +11,7 @@ class LeiTextoMapper {
       sigla: dto.sigla,
       blocos: List.unmodifiable(dto.blocos),
       audiosPorBloco: Map.unmodifiable(dto.audiosPorBloco),
+      linksPorBloco: Map.unmodifiable(dto.linksPorBloco),
     );
   }
 }

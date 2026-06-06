@@ -287,6 +287,7 @@ class _LeiReadingScreenState extends ConsumerState<LeiReadingScreen>
           scrollController: _scrollController,
           blocos: _controller.texto!.blocos,
           audiosPorBloco: _controller.texto!.audiosPorBloco,
+          linksPorBloco: _controller.texto!.linksPorBloco,
           leiId: _controller.texto!.id,
           sigla: sigla,
           titulo: titulo,

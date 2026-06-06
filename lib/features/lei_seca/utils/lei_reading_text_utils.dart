@@ -27,9 +27,13 @@ abstract final class LeiReadingTextUtils {
   static bool ehRotuloArtigo(String text) {
     final t = text.trimLeft();
     if (t.length > 80 || t.contains('\n\n')) return false;
-    // Matches "Art. 1", "Art. 2º", "Art. 7-F", optionally with leading - for revoked
+    // Matches "Art. 1", "Art. 2º", "Art. 7-F", "Art. 10-A" etc.
+    // Original class [\d\w\-] was kept as base but we explicitly added º and ª
+    // because the JSON normalizes to "Art. 4º" / "Art. 5º" etc.
+    // Without this, some article rotulos present in the JSON could fail to be
+    // recognized as rotulos in the UI (wrong padding + not bold + possibly wrong drop-cap).
     return RegExp(
-      r'^-?\s*Art\.?\s*[\d\w\-]+',
+      r'^-?\s*Art\.?\s*[\d\w\-ºª]+',
       caseSensitive: false,
     ).hasMatch(t);
   }

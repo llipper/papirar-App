@@ -18,6 +18,7 @@ class LeiTextoAssetDatasource {
       final jsonString = await rootBundle.loadString(assetPath);
       final dto = await compute(_parseDto, jsonString);
       _cache[assetPath] = dto;
+
       return dto;
     } catch (e) {
       debugPrint('LeiTextoAssetDatasource: $assetPath — $e');
