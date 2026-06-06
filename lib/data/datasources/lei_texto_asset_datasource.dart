@@ -16,7 +16,8 @@ class LeiTextoAssetDatasource {
 
     try {
       final jsonString = await rootBundle.loadString(assetPath);
-      final dto = await compute(_parseDto, jsonString);
+      final audioJsonString = await _loadAudioCatalog(assetPath);
+      final dto = await compute(_parseDto, [jsonString, audioJsonString]);
       _cache[assetPath] = dto;
 
       return dto;
@@ -29,7 +30,9 @@ class LeiTextoAssetDatasource {
         final jsonAssets = manifestMap.keys
             .where((k) => k.contains('json/') && k.endsWith('.json'))
             .toList();
-        debugPrint('Bundled JSON assets (${jsonAssets.length} total): ${jsonAssets.take(10).join(', ')}...');
+        debugPrint(
+          'Bundled JSON assets (${jsonAssets.length} total): ${jsonAssets.take(10).join(', ')}...',
+        );
         if (!manifestMap.containsKey(assetPath)) {
           debugPrint('>>> $assetPath NOT FOUND in AssetManifest.json');
         }
@@ -40,8 +43,44 @@ class LeiTextoAssetDatasource {
     }
   }
 
-  static LeiTextoJsonDto _parseDto(String jsonString) {
-    final data = jsonDecode(jsonString) as Map<String, dynamic>;
-    return LeiTextoJsonDto.fromJson(data);
+  Future<String?> _loadAudioCatalog(String assetPath) async {
+    final audioAssetPath = _audioAssetPath(assetPath);
+    if (audioAssetPath == null) return null;
+
+    try {
+      return await rootBundle.loadString(audioAssetPath);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  String? _audioAssetPath(String assetPath) {
+    const extension = '.json';
+    if (!assetPath.endsWith(extension)) return null;
+    return assetPath.replaceRange(
+      assetPath.length - extension.length,
+      assetPath.length,
+      '_audio.json',
+    );
+  }
+
+  static LeiTextoJsonDto _parseDto(List<String?> jsonStrings) {
+    final data = jsonDecode(jsonStrings.first ?? '') as Map<String, dynamic>;
+    final audioCatalogString = jsonStrings.length > 1 ? jsonStrings[1] : null;
+
+    return LeiTextoJsonDto.fromJson(
+      data,
+      audioCatalog: _parseAudioCatalog(audioCatalogString),
+    );
+  }
+
+  static Map<String, dynamic>? _parseAudioCatalog(String? jsonString) {
+    if (jsonString == null || jsonString.trim().isEmpty) return null;
+
+    try {
+      return jsonDecode(jsonString) as Map<String, dynamic>;
+    } catch (_) {
+      return null;
+    }
   }
 }

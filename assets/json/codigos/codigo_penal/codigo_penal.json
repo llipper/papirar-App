@@ -38,11 +38,7 @@
                     "caput": "Não há crime sem lei anterior que o defina. Não há pena sem prévia cominação legal.",
                     "rubrica": "Anterioridade da Lei",
                     "linhaRubrica": 14,
-                    "audio": {
-                        "id": "codigopenal-art-1",
-                        "titulo": "Explicação do Art. 1º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art1.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_1"
                 },
                 {
                     "numero": "2º",
@@ -59,11 +55,7 @@
                     ],
                     "rubrica": "Lei penal no tempo",
                     "linhaRubrica": 18,
-                    "audio": {
-                        "id": "codigopenal-art-2",
-                        "titulo": "Explicação do Art. 2º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art2.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_2"
                 },
                 {
                     "numero": "3º",
@@ -72,11 +64,7 @@
                     "caput": "A lei excepcional ou temporária, embora decorrido o período de sua duração ou cessadas as circunstâncias que a determinaram, aplica-se ao fato praticado durante sua vigência.",
                     "rubrica": "Lei excepcional ou temporária",
                     "linhaRubrica": 24,
-                    "audio": {
-                        "id": "codigopenal-art-3",
-                        "titulo": "Explicação do Art. 3º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art3.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_3"
                 },
                 {
                     "numero": "4º",
@@ -85,11 +73,7 @@
                     "caput": "Considera-se praticado o crime no momento da ação ou omissão, ainda que outro seja o momento do resultado.",
                     "rubrica": "Tempo do crime",
                     "linhaRubrica": 28,
-                    "audio": {
-                        "id": "codigopenal-art-4",
-                        "titulo": "Explicação do Art. 4º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art4.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_4"
                 },
                 {
                     "numero": "5º",
@@ -112,11 +96,7 @@
                     ],
                     "rubrica": "Territorialidade",
                     "linhaRubrica": 32,
-                    "audio": {
-                        "id": "codigopenal-art-5",
-                        "titulo": "Explicação do Art. 5º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art5.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_5"
                 },
                 {
                     "numero": "6º",
@@ -125,11 +105,7 @@
                     "caput": "Considera-se praticado o crime no lugar em que ocorreu a ação ou omissão, no todo ou em parte, bem como onde se produziu ou deveria produzir-se o resultado.",
                     "rubrica": "Lugar do crime",
                     "linhaRubrica": 40,
-                    "audio": {
-                        "id": "codigopenal-art-6",
-                        "titulo": "Explicação do Art. 6º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art6.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_6"
                 },
                 {
                     "numero": "7º",
@@ -142,11 +118,7 @@
                             "rotulo": "§ 1º",
                             "linha": 66,
                             "texto": "Nos casos do inciso I, o agente é punido segundo a lei brasileira, ainda que absolvido ou condenado no estrangeiro.",
-                            "audio": {
-                                "id": "codigopenal-art-7-1",
-                                "titulo": "Explicação do § 1º",
-                                "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art7-i.mp3"
-                            }
+                            "audioId": "codigo_penal_artigo_7_1"
                         },
                         {
                             "numero": "2º",
@@ -194,11 +166,7 @@
                                     "fim": 24
                                 }
                             ],
-                            "audio": {
-                                "id": "codigopenal-art-7-2",
-                                "titulo": "Explicação do § 2º",
-                                "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art7---ii.mp3"
-                            }
+                            "audioId": "codigo_penal_artigo_7_2"
                         },
                         {
                             "numero": "3º",
@@ -219,11 +187,7 @@
                                     "texto": "houve requisição do Ministro da Justiça."
                                 }
                             ],
-                            "audio": {
-                                "id": "codigopenal-art-7-3",
-                                "titulo": "Explicação do § 3º",
-                                "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art7---iii.mp3"
-                            }
+                            "audioId": "codigo_penal_artigo_7_3"
                         }
                     ],
                     "incisos": [
@@ -258,11 +222,7 @@
                                     "texto": "de genocídio, quando o agente for brasileiro ou domiciliado no Brasil;"
                                 }
                             ],
-                            "audio": {
-                                "id": "codigopenal-art-7-i",
-                                "titulo": "Explicação do Inciso I",
-                                "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art7---inciso-i.mp3"
-                            }
+                            "audioId": "codigo_penal_artigo_7_i"
                         },
                         {
                             "numero": "II",
@@ -289,11 +249,7 @@
                                     "texto": "praticados em aeronaves ou embarcações brasileiras, mercantes ou de propriedade privada, quando em território estrangeiro e aí não sejam julgados."
                                 }
                             ],
-                            "audio": {
-                                "id": "codigopenal-art-7-i",
-                                "titulo": "Explicação do Inciso II",
-                                "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art7---inciso-ii.mp3"
-                            }
+                            "audioId": "codigo_penal_artigo_7_ii"
                         }
                     ],
                     "rubrica": "Extraterritorialidade",
@@ -306,11 +262,7 @@
                     "caput": "A pena cumprida no estrangeiro atenua a pena imposta no Brasil pelo mesmo crime, quando diversas, ou nela é computada, quando idênticas.",
                     "rubrica": "Pena cumprida no estrangeiro",
                     "linhaRubrica": 86,
-                    "audio": {
-                        "id": "codigopenal-art-8",
-                        "titulo": "Explicação do Art. 8º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art8.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_8"
                 },
                 {
                     "numero": "9º",
@@ -355,11 +307,7 @@
                     ],
                     "rubrica": "Eficácia de sentença estrangeira",
                     "linhaRubrica": 90,
-                    "audio": {
-                        "id": "codigopenal-art-9",
-                        "titulo": "Explicação do Art. 9º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/codigopenal/codigo-penal---art9.mp3"
-                    }
+                    "audioId": "codigo_penal_artigo_9"
                 },
                 {
                     "numero": "10º",
@@ -367,7 +315,8 @@
                     "linha": 106,
                     "caput": "O dia do começo inclui-se no cômputo do prazo. Contam-se os dias, os meses e os anos pelo calendário comum.",
                     "rubrica": "Contagem de prazo",
-                    "linhaRubrica": 104
+                    "linhaRubrica": 104,
+                    "audioId": "codigo_penal_artigo_10"
                 },
                 {
                     "numero": "11º",
@@ -375,7 +324,8 @@
                     "linha": 110,
                     "caput": "Desprezam-se, nas penas privativas de liberdade e nas restritivas de direitos, as frações de dia, e, na pena de multa, as frações de cruzeiro.",
                     "rubrica": "Frações não computáveis da pena",
-                    "linhaRubrica": 108
+                    "linhaRubrica": 108,
+                    "audioId": "codigo_penal_artigo_11"
                 },
                 {
                     "numero": "12º",
@@ -383,7 +333,8 @@
                     "linha": 114,
                     "caput": "As regras gerais deste Código aplicam-se aos fatos incriminados por lei especial, se esta não dispuser de modo diverso.",
                     "rubrica": "Legislação especial",
-                    "linhaRubrica": 112
+                    "linhaRubrica": 112,
+                    "audioId": "codigo_penal_artigo_12"
                 }
             ],
             "titulo": "DA APLICAÇÃO DA LEI PENAL",
@@ -399,6 +350,7 @@
                     "rotulo": "Art. 13º",
                     "linha": 122,
                     "caput": "O resultado, de que depende a existência do crime, somente é imputável a quem lhe deu causa. Considera-se causa a ação ou omissão sem a qual o resultado não teria ocorrido.",
+                    "audioId": "codigo_penal_artigo_13",
                     "paragrafos": [
                         {
                             "numero": "1º",
@@ -406,13 +358,15 @@
                             "linha": 126,
                             "texto": "A superveniência de causa relativamente independente exclui a imputação quando, por si só, produziu o resultado; os fatos anteriores, entretanto, imputam-se a quem os praticou.",
                             "rubrica": "Superveniência de causa independente",
-                            "linhaRubrica": 124
+                            "linhaRubrica": 124,
+                            "audioId": "codigo_penal_artigo_13_1"
                         },
                         {
                             "numero": "2º",
                             "rotulo": "§ 2º",
                             "linha": 130,
                             "texto": "A omissão é penalmente relevante quando o omitente devia e podia agir para evitar o resultado. O dever de agir incumbe a quem:",
+                            "audioId": "codigo_penal_artigo_13_2",
                             "alineas": [
                                 {
                                     "letra": "a",
@@ -462,7 +416,8 @@
                             "linha": 142,
                             "texto": "consumado, quando nele se reúnem todos os elementos de sua definição legal;",
                             "rubrica": "Crime consumado",
-                            "linhaRubrica": 140
+                            "linhaRubrica": 140,
+                            "audioId": "codigo_penal_artigo_14_i"
                         },
                         {
                             "numero": "II",
@@ -470,7 +425,8 @@
                             "linha": 146,
                             "texto": "tentado, quando, iniciada a execução, não se consuma por circunstâncias alheias à vontade do agente.",
                             "rubrica": "Tentativa",
-                            "linhaRubrica": 144
+                            "linhaRubrica": 144,
+                            "audioId": "codigo_penal_artigo_14_ii"
                         }
                     ]
                 },
@@ -480,7 +436,8 @@
                     "linha": 154,
                     "caput": "O agente que, voluntariamente, desiste de prosseguir na execução ou impede que o resultado se produza, só responde pelos atos já praticados.",
                     "rubrica": "Desistência voluntária e arrependimento eficaz",
-                    "linhaRubrica": 152
+                    "linhaRubrica": 152,
+                    "audioId": "codigo_penal_artigo_15"
                 },
                 {
                     "numero": "16º",
@@ -488,7 +445,8 @@
                     "linha": 158,
                     "caput": "Nos crimes cometidos sem violência ou grave ameaça à pessoa, reparado o dano ou restituída a coisa, até o recebimento da denúncia ou da queixa, por ato voluntário do agente, a pena será reduzida de um a dois terços.",
                     "rubrica": "Arrependimento posterior",
-                    "linhaRubrica": 156
+                    "linhaRubrica": 156,
+                    "audioId": "codigo_penal_artigo_16"
                 },
                 {
                     "numero": "17º",
@@ -496,13 +454,15 @@
                     "linha": 162,
                     "caput": "Não se pune a tentativa quando, por ineficácia absoluta do meio ou por absoluta impropriedade do objeto, é impossível consumar-se o crime.",
                     "rubrica": "Crime impossível",
-                    "linhaRubrica": 160
+                    "linhaRubrica": 160,
+                    "audioId": "codigo_penal_artigo_17"
                 },
                 {
                     "numero": "18º",
                     "rotulo": "Art. 18º",
                     "linha": 164,
                     "caput": "Diz-se o crime:",
+                    "audioId": "codigo_penal_artigo_18",
                     "paragrafos": [
                         {
                             "numero": "único",
@@ -518,7 +478,8 @@
                             "linha": 168,
                             "texto": "doloso, quando o agente quis o resultado ou assumiu o risco de produzi-lo;",
                             "rubrica": "Crime doloso",
-                            "linhaRubrica": 166
+                            "linhaRubrica": 166,
+                            "audioId": "codigo_penal_artigo_18_i"
                         },
                         {
                             "numero": "II",
@@ -526,7 +487,8 @@
                             "linha": 172,
                             "texto": "culposo, quando o agente deu causa ao resultado por imprudência, negligência ou imperícia.",
                             "rubrica": "Crime culposo",
-                            "linhaRubrica": 170
+                            "linhaRubrica": 170,
+                            "audioId": "codigo_penal_artigo_18_ii"
                         }
                     ]
                 },
@@ -536,13 +498,15 @@
                     "linha": 178,
                     "caput": "Pelo resultado que agrava especialmente a pena, só responde o agente que o houver causado ao menos culposamente.",
                     "rubrica": "Agravação pelo resultado",
-                    "linhaRubrica": 176
+                    "linhaRubrica": 176,
+                    "audioId": "codigo_penal_artigo_19"
                 },
                 {
                     "numero": "20º",
                     "rotulo": "Art. 20º",
                     "linha": 182,
                     "caput": "O erro sobre elemento constitutivo do tipo legal de crime exclui o dolo, mas permite a punição por crime culposo, se previsto em lei.",
+                    "audioId": "codigo_penal_artigo_20",
                     "paragrafos": [
                         {
                             "numero": "1º",
@@ -550,7 +514,8 @@
                             "linha": 186,
                             "texto": "É isento de pena quem, por erro plenamente justificado pelas circunstâncias, supõe situação de fato que, se existisse, tornaria a ação legítima. Não há isenção de pena quando o erro deriva de culpa e o fato é punível como crime culposo.",
                             "rubrica": "Descriminantes putativas",
-                            "linhaRubrica": 184
+                            "linhaRubrica": 184,
+                            "audioId": "codigo_penal_artigo_20_i"
                         },
                         {
                             "numero": "2º",
@@ -558,7 +523,8 @@
                             "linha": 190,
                             "texto": "Responde pelo crime o terceiro que determina o erro.",
                             "rubrica": "Erro determinado por terceiro",
-                            "linhaRubrica": 188
+                            "linhaRubrica": 188,
+                            "audioId": "codigo_penal_artigo_20_ii"
                         },
                         {
                             "numero": "3º",
@@ -566,7 +532,8 @@
                             "linha": 194,
                             "texto": "O erro quanto à pessoa contra a qual o crime é praticado não isenta de pena. Não se consideram, neste caso, as condições ou qualidades da vítima, senão as da pessoa contra quem o agente queria praticar o crime.",
                             "rubrica": "Erro sobre a pessoa",
-                            "linhaRubrica": 192
+                            "linhaRubrica": 192,
+                            "audioId": "codigo_penal_artigo_20_iii"
                         }
                     ],
                     "rubrica": "Erro sobre elementos do tipo",

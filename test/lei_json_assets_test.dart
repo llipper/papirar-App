@@ -137,6 +137,44 @@ void main() {
     expect(dto.audiosPorBloco[blocoIndex]?.id, 'audio-inciso-i');
   });
 
+  test('artigo resolve audioId pelo catálogo separado', () {
+    final dto = LeiTextoJsonDto.fromJson(
+      {
+        'titulo': 'Lei teste',
+        'fonte': 'teste',
+        'divisoes': [
+          {
+            'rotulo': 'PARTE TESTE',
+            'artigos': [
+              {
+                'numero': '1º',
+                'rotulo': 'Art. 1º',
+                'caput': 'Texto do caput.',
+                'audioId': 'lei-teste-art-1',
+              },
+            ],
+          },
+        ],
+      },
+      audioCatalog: {
+        'lei-teste-art-1': {
+          'titulo': 'Explicação do Art. 1º',
+          'url': 'https://example.com/art1.mp3',
+        },
+      },
+    );
+
+    final artigoIndex = dto.blocos.indexOf('Art. 1º');
+
+    expect(artigoIndex, isNonNegative);
+    expect(dto.audiosPorBloco[artigoIndex]?.id, 'lei-teste-art-1');
+    expect(dto.audiosPorBloco[artigoIndex]?.title, 'Explicação do Art. 1º');
+    expect(
+      dto.audiosPorBloco[artigoIndex]?.url,
+      'https://example.com/art1.mp3',
+    );
+  });
+
   testWidgets('áudio de inciso romano com rubrica aparece na rubrica', (
     tester,
   ) async {

@@ -78,22 +78,14 @@
                             "texto": "o pluralismo político."
                         }
                     ],
-                    "audio": {
-                        "id": "constituicao88-art-1",
-                        "titulo": "Explicação do Art. 1º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/constitutional/titulo-i---art-1.mp3"
-                    }
+                    "audioId": "constituicao88-artigo_1"
                 },
                 {
                     "numero": "2º",
                     "rotulo": "Art. 2º",
                     "linha": 44,
                     "caput": "São Poderes da União, independentes e harmônicos entre si, o Legislativo, o Executivo e o Judiciário.",
-                    "audio": {
-                        "id": "constituicao88-art-2",
-                        "titulo": "Explicação do Art. 2º",
-                        "url": "https://pub-c1a7c48bea344fcc9aa3eb6164e56e43.r2.dev/constitutional/titulo-i---art-2.mp3"
-                    }
+                    "audioId": "constituicao88-artigo_2"
                 },
                 {
                     "numero": "3º",

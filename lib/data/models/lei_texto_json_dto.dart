@@ -37,7 +37,10 @@ class LeiTextoJsonDto {
     return t.trim();
   }
 
-  factory LeiTextoJsonDto.fromJson(Map<String, dynamic> json) {
+  factory LeiTextoJsonDto.fromJson(
+    Map<String, dynamic> json, {
+    Map<String, dynamic>? audioCatalog,
+  }) {
     final blocos = <String>[];
     final audiosPorBloco = <int, LeiAudioExplanation>{};
     final linksPorBloco = <int, List<LeiTextLinkRange>>{};
@@ -84,7 +87,10 @@ class LeiTextoJsonDto {
 
     if (blocos.isEmpty) {
       if (json['divisoes'] != null) {
-        final rich = _flattenNovoFormatoToBlocos(json);
+        final rich = _flattenNovoFormatoToBlocos(
+          json,
+          audioCatalog: audioCatalog,
+        );
         blocos.addAll(rich.blocos);
         audiosPorBloco.addAll(rich.audiosPorBloco);
         linksPorBloco.addAll(rich.linksPorBloco);
@@ -211,15 +217,36 @@ class LeiTextoJsonDto {
     Map<int, LeiAudioExplanation> audiosPorBloco,
     Map<int, List<LeiTextLinkRange>> linksPorBloco,
   })
-  _flattenNovoFormatoToBlocos(Map<String, dynamic> json) {
+  _flattenNovoFormatoToBlocos(
+    Map<String, dynamic> json, {
+    Map<String, dynamic>? audioCatalog,
+  }) {
     final result = <String>[];
     final audiosPorBloco = <int, LeiAudioExplanation>{};
     final linksPorBloco = <int, List<LeiTextLinkRange>>{};
 
     _appendListaTexto(result, json['preambulo'], linksPorBloco);
-    _appendDivisoes(result, json['divisoes'], audiosPorBloco, linksPorBloco);
-    _appendDivisao(result, json['adct'], audiosPorBloco, linksPorBloco);
-    _appendDivisao(result, json['anexo'], audiosPorBloco, linksPorBloco);
+    _appendDivisoes(
+      result,
+      json['divisoes'],
+      audiosPorBloco,
+      linksPorBloco,
+      audioCatalog,
+    );
+    _appendDivisao(
+      result,
+      json['adct'],
+      audiosPorBloco,
+      linksPorBloco,
+      audioCatalog,
+    );
+    _appendDivisao(
+      result,
+      json['anexo'],
+      audiosPorBloco,
+      linksPorBloco,
+      audioCatalog,
+    );
 
     return (
       blocos: result.where((b) => b.trim().isNotEmpty).toList(),
@@ -256,10 +283,11 @@ class LeiTextoJsonDto {
     dynamic value,
     Map<int, LeiAudioExplanation> audiosPorBloco,
     Map<int, List<LeiTextLinkRange>> linksPorBloco,
+    Map<String, dynamic>? audioCatalog,
   ) {
     if (value is! List<dynamic>) return;
     for (final item in value) {
-      _appendDivisao(result, item, audiosPorBloco, linksPorBloco);
+      _appendDivisao(result, item, audiosPorBloco, linksPorBloco, audioCatalog);
     }
   }
 
@@ -268,6 +296,7 @@ class LeiTextoJsonDto {
     dynamic value,
     Map<int, LeiAudioExplanation> audiosPorBloco,
     Map<int, List<LeiTextLinkRange>> linksPorBloco,
+    Map<String, dynamic>? audioCatalog,
   ) {
     if (value is! Map<String, dynamic>) return;
 
@@ -277,8 +306,20 @@ class LeiTextoJsonDto {
     if (titulo.isNotEmpty && titulo != rotulo) result.add(titulo);
 
     _appendListaTexto(result, value['itens'], linksPorBloco);
-    _appendArtigos(result, value['artigos'], audiosPorBloco, linksPorBloco);
-    _appendDivisoes(result, value['divisoes'], audiosPorBloco, linksPorBloco);
+    _appendArtigos(
+      result,
+      value['artigos'],
+      audiosPorBloco,
+      linksPorBloco,
+      audioCatalog,
+    );
+    _appendDivisoes(
+      result,
+      value['divisoes'],
+      audiosPorBloco,
+      linksPorBloco,
+      audioCatalog,
+    );
   }
 
   static void _appendArtigos(
@@ -286,6 +327,7 @@ class LeiTextoJsonDto {
     dynamic value,
     Map<int, LeiAudioExplanation> audiosPorBloco,
     Map<int, List<LeiTextLinkRange>> linksPorBloco,
+    Map<String, dynamic>? audioCatalog,
   ) {
     if (value is! List<dynamic>) return;
     for (final item in value) {
@@ -298,7 +340,14 @@ class LeiTextoJsonDto {
       );
       final labelIndex = result.length;
       result.add(label);
-      _appendAudio(audiosPorBloco, labelIndex, item['audio'], label);
+      _appendAudio(
+        audiosPorBloco,
+        labelIndex,
+        item['audio'],
+        label,
+        audioId: item['audioId']?.toString(),
+        audioCatalog: audioCatalog,
+      );
 
       final partes = <_BlocoLeiParte>[];
       final rubrica = _normalizarTexto(item['rubrica']?.toString() ?? '');
@@ -379,9 +428,19 @@ class LeiTextoJsonDto {
     Map<int, LeiAudioExplanation> audiosPorBloco,
     int blocoIndex,
     dynamic value,
-    String fallbackTitle,
-  ) {
-    if (value == null) return;
+    String fallbackTitle, {
+    String? audioId,
+    Map<String, dynamic>? audioCatalog,
+  }) {
+    if (value == null) {
+      final catalogAudio = _audioFromCatalog(
+        audioCatalog,
+        audioId,
+        fallbackTitle,
+      );
+      if (catalogAudio != null) audiosPorBloco[blocoIndex] = catalogAudio;
+      return;
+    }
 
     if (value is String && value.trim().isNotEmpty) {
       audiosPorBloco[blocoIndex] = LeiAudioExplanation(
@@ -400,6 +459,35 @@ class LeiTextoJsonDto {
 
     audiosPorBloco[blocoIndex] = LeiAudioExplanation(
       id: id.isNotEmpty ? id : _safeAudioId(fallbackTitle),
+      title: title.isNotEmpty ? title : 'Explicação de $fallbackTitle',
+      url: url,
+    );
+  }
+
+  static LeiAudioExplanation? _audioFromCatalog(
+    Map<String, dynamic>? audioCatalog,
+    String? audioId,
+    String fallbackTitle,
+  ) {
+    final id = audioId?.trim() ?? '';
+    if (id.isEmpty || audioCatalog == null) return null;
+
+    final value = audioCatalog[id];
+    if (value is String && value.trim().isNotEmpty) {
+      return LeiAudioExplanation(
+        id: id,
+        title: 'Explicação de $fallbackTitle',
+        url: value.trim(),
+      );
+    }
+
+    if (value is! Map<String, dynamic>) return null;
+    final url = value['url']?.toString().trim() ?? '';
+    if (url.isEmpty) return null;
+    final title = (value['titulo'] ?? value['title'])?.toString().trim() ?? '';
+
+    return LeiAudioExplanation(
+      id: id,
       title: title.isNotEmpty ? title : 'Explicação de $fallbackTitle',
       url: url,
     );
