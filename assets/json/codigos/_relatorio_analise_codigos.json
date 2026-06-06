@@ -1,0 +1,610 @@
+[
+  {
+    "codigo": "codigo_civil",
+    "arquivos": {
+      "json": "codigo_civil.json",
+      "html": "l10406compilada.htm",
+      "txt": "codigo_civil.txt"
+    },
+    "jsonValido": true,
+    "jsonError": null,
+    "fonte": {
+      "linhas": 4993,
+      "artigos": 2034,
+      "paragrafos": 900,
+      "incisos": 843,
+      "alineas": 12,
+      "candidatasRubrica": 315
+    },
+    "json": {
+      "artigos": 2034,
+      "paragrafos": 900,
+      "incisos": 844,
+      "alineas": 12,
+      "rubricas": 166
+    },
+    "problemas": {
+      "artigosFaltando": [],
+      "artigosExtras": [],
+      "rubricasMisturadas": [],
+      "possivelRubricaNoTexto": [
+        {
+          "rotulo": "§ 3º",
+          "inicio": "O disposto no caput e nos §§ 1º e 2º deste artigo também se aplica à extensão das obrigações de sócios ou de administradores à pessoa jurídica."
+        },
+        {
+          "rotulo": "§ 8º",
+          "inicio": "Na hipótese do § 7º deste artigo, o agente de garantia deverá agir com estrita boa-fé perante o devedor."
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "Para fins do disposto no § 4º, poderão ser dispensados o uso da firma, com a respectiva assinatura autógrafa, o capital, requerimentos, demais assinaturas, informações relativas à "
+        },
+        {
+          "rotulo": "§ 1º",
+          "inicio": "Não podem fazer parte do conselho fiscal, além dos inelegíveis enumerados no § 1 o do art. 1.011, os membros dos demais órgãos da sociedade ou de outra por ela controlada, os empre"
+        }
+      ]
+    }
+  },
+  {
+    "codigo": "codigo_de_processo_civil",
+    "arquivos": {
+      "json": "codigo_de_processo_civil.json",
+      "html": "l13105.htm",
+      "txt": "codigo_de_processo_civil.txt"
+    },
+    "jsonValido": true,
+    "jsonError": null,
+    "fonte": {
+      "linhas": 4436,
+      "artigos": 1069,
+      "paragrafos": 1513,
+      "incisos": 1264,
+      "alineas": 61,
+      "candidatasRubrica": 200
+    },
+    "json": {
+      "artigos": 1069,
+      "paragrafos": 1513,
+      "incisos": 1265,
+      "alineas": 61,
+      "rubricas": 125
+    },
+    "problemas": {
+      "artigosFaltando": [],
+      "artigosExtras": [],
+      "rubricasMisturadas": [],
+      "possivelRubricaNoTexto": [
+        {
+          "rotulo": "§ 4º",
+          "inicio": "Após a inclusão do processo na lista de que trata o § 1º, o requerimento formulado pela parte não altera a ordem cronológica para a decisão, exceto quando implicar a reabertura da "
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "Decidido o requerimento previsto no § 4º, o processo retornará à mesma posição em que anteriormente se encontrava na lista."
+        },
+        {
+          "rotulo": "§ 6º",
+          "inicio": "Ocupará o primeiro lugar na lista prevista no § 1º ou, conforme o caso, no § 3º, o processo que:"
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Não se exigirá a reciprocidade referida no § 1º para homologação de sentença estrangeira."
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Na hipótese do § 1º, o juiz, ao não admitir a cumulação de pedidos em razão da incompetência para apreciar qualquer deles, não examinará o mérito daquele em que exista interesse da"
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "Não sendo paga no prazo a ser fixado pelo juiz, a multa prevista no § 2º será inscrita como dívida ativa da União ou do Estado após o trânsito em julgado da decisão que a fixou, e "
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "A multa estabelecida no § 2º poderá ser fixada independentemente da incidência das previstas nos arts. 523, § 1º, e 536, § 1º."
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "Quando o valor da causa for irrisório ou inestimável, a multa prevista no § 2º poderá ser fixada em até 10 (dez) vezes o valor do salário-mínimo."
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "Em qualquer das hipóteses do § 3º :"
+        },
+        {
+          "rotulo": "§ 6º",
+          "inicio": "Os limites e critérios previstos nos §§ 2º e 3º aplicam-se independentemente de qual seja o conteúdo da decisão, inclusive aos casos de improcedência ou de sentença sem resolução d"
+        },
+        {
+          "rotulo": "§ 8º-A",
+          "inicio": "Na hipótese do § 8º deste artigo, para fins de fixação equitativa de honorários sucumbenciais, o juiz deverá observar os valores recomendados pelo Conselho Seccional da Ordem dos A"
+        },
+        {
+          "rotulo": "§ 12º",
+          "inicio": "Os honorários referidos no § 11 são cumuláveis com multas e outras sanções processuais, inclusive as previstas no art. 77."
+        },
+        {
+          "rotulo": "§ 20º",
+          "inicio": "O disposto nos §§ 2º, 3º, 4º, 5º, 6º, 6º-A, 8º, 8º-A, 9º e 10 deste artigo aplica-se aos honorários fixados por arbitramento judicial."
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Se a distribuição de que trata o § 1º não for feita, os vencidos responderão solidariamente pelas despesas e pelos honorários."
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "Na hipótese do § 3º, o juiz, após o trânsito em julgado da decisão final, oficiará a Fazenda Pública para que promova, contra quem tiver sido condenado ao pagamento das despesas pr"
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "Para fins de aplicação do § 3º, é vedada a utilização de recursos do fundo de custeio da Defensoria Pública."
+        },
+        {
+          "rotulo": "§ 8º",
+          "inicio": "Na hipótese do § 1º, inciso IX, havendo dúvida fundada quanto ao preenchimento atual dos pressupostos para a concessão de gratuidade, o notário ou registrador, após praticar o ato,"
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "Na hipótese do § 4º, o recurso que verse exclusivamente sobre valor de honorários de sucumbência fixados em favor do advogado de beneficiário estará sujeito a preparo, salvo se o p"
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "Na hipótese do § 2º, é lícito ao procurador retirar os autos para obtenção de cópias, pelo prazo de 2 (duas) a 6 (seis) horas, independentemente de ajuste e sem prejuízo da continu"
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "O procurador perderá no mesmo processo o direito a que se refere o § 3º se não devolver os autos tempestivamente, salvo se o prazo for prorrogado pelo juiz."
+        }
+      ]
+    }
+  },
+  {
+    "codigo": "codigo_de_processo_penal",
+    "arquivos": {
+      "json": "codigo_de_processo_penal.json",
+      "html": "del3689.htm",
+      "txt": "codigo_de_processo_penal.txt"
+    },
+    "jsonValido": true,
+    "jsonError": null,
+    "fonte": {
+      "linhas": 2324,
+      "artigos": 816,
+      "paragrafos": 624,
+      "incisos": 546,
+      "alineas": 88,
+      "candidatasRubrica": 97
+    },
+    "json": {
+      "artigos": 816,
+      "paragrafos": 624,
+      "incisos": 547,
+      "alineas": 88,
+      "rubricas": 34
+    },
+    "problemas": {
+      "artigosFaltando": [],
+      "artigosExtras": [],
+      "rubricasMisturadas": [],
+      "possivelRubricaNoTexto": [
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Esgotado o prazo disposto no § 1º deste artigo com ausência de nomeação de defensor pelo investigado, a autoridade responsável pela investigação deverá intimar a instituição a que "
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "Havendo necessidade de indicação de defensor nos termos do § 2º deste artigo, a defesa caberá preferencialmente à Defensoria Pública, e, nos locais em que ela não estiver instalada"
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "A indicação do profissional a que se refere o § 3º deste artigo deverá ser precedida de manifestação de que não existe defensor público lotado na área territorial onde tramita o in"
+        },
+        {
+          "rotulo": "Art. 179º.",
+          "inicio": "No caso do § 1o do art. 159, o escrivão lavrará o auto respectivo, que será assinado pelos peritos e, se presente ao exame, também pela autoridade."
+        },
+        {
+          "rotulo": "§ 9º",
+          "inicio": "Na hipótese do § 8o deste artigo, fica garantido o acompanhamento do ato processual pelo acusado e seu defensor."
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "A intimação pessoal, feita pelo escrivão, dispensará a aplicação a que alude o § 1o."
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "As isenções de que trata o § 1º deste artigo aplicam-se apenas à vítima e, em caso de morte, ao cônjuge, ascendente, descendente ou irmão, quando a estes couber o direito de repres"
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Na hipótese do § 1o deste artigo, o juiz intimará a Defensoria Pública para o novo julgamento, que será adiado para o primeiro dia desimpedido, observado o prazo mínimo de 10 (dez)"
+        },
+        {
+          "rotulo": "Art. 530º-B.",
+          "inicio": "Nos casos das infrações previstas nos §§ 1o, 2o e 3o do art. 184 do Código Penal, a autoridade policial procederá à apreensão dos bens ilicitamente produzidos ou reproduzidos, em s"
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "Não se aplicará o disposto no § 2o, quando houver sido imposta ou resultar de condenação pena acessória consistente em interdição de direitos."
+        },
+        {
+          "rotulo": "Art. 760º.",
+          "inicio": "Para a verificação da periculosidade, no caso do § 3o do art. 78 do Código Penal, observar-se-á o disposto no art. 757, no que for aplicável."
+        },
+        {
+          "rotulo": "Art. 776º.",
+          "inicio": "Nos exames sucessivos a que se referem o § 1º, II, e § 2o do art. 81 do Código Penal, observar-se-á, no que Ihes for aplicável, o disposto no artigo anterior."
+        }
+      ]
+    }
+  },
+  {
+    "codigo": "codigo_de_processo_penal_militar",
+    "arquivos": {
+      "json": "codigo_de_processo_penal_militar.json",
+      "html": "del1002.htm",
+      "txt": "codigo_de_processo_penal_militar.txt"
+    },
+    "jsonValido": true,
+    "jsonError": null,
+    "fonte": {
+      "linhas": 3041,
+      "artigos": 714,
+      "paragrafos": 432,
+      "incisos": 42,
+      "alineas": 520,
+      "candidatasRubrica": 1058
+    },
+    "json": {
+      "artigos": 714,
+      "paragrafos": 432,
+      "incisos": 42,
+      "alineas": 520,
+      "rubricas": 1061
+    },
+    "problemas": {
+      "artigosFaltando": [],
+      "artigosExtras": [],
+      "rubricasMisturadas": [],
+      "possivelRubricaNoTexto": [
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Esgotado o prazo disposto no § 1º com ausência de nomeação de defensor pelo investigado, a autoridade responsável pela investigação deverá intimar a instituição a que estava vincul"
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "Havendo necessidade de indicação de defensor nos termos do § 2º deste artigo, a defesa caberá preferencialmente à Defensoria Pública e, nos locais em que ela não estiver instalada,"
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "A indicação do profissional a que se refere o § 3º deste artigo deverá ser precedida de manifestação de que não existe defensor público lotado na área territorial onde tramita o in"
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Não haverá mais prorrogação, além da prevista no § 1º, salvo dificuldade insuperável, a juízo do ministro de Estado competente. Os laudos de perícias ou exames não concluídos nessa"
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Não se aplicará o disposto no § 1º quando houver sido imposta, ou resultar de condenação, pena acessória consistente em interdição de direitos."
+        }
+      ]
+    }
+  },
+  {
+    "codigo": "codigo_de_transito_brasileiro",
+    "arquivos": {
+      "json": "codigo_de_transito_brasileiro.json",
+      "html": "l9503compilado.html",
+      "txt": "codigo_de_transito_brasileiro.txt"
+    },
+    "jsonValido": true,
+    "jsonError": null,
+    "fonte": {
+      "linhas": 2102,
+      "artigos": 363,
+      "paragrafos": 437,
+      "incisos": 573,
+      "alineas": 81,
+      "candidatasRubrica": 27
+    },
+    "json": {
+      "artigos": 363,
+      "paragrafos": 437,
+      "incisos": 573,
+      "alineas": 81,
+      "rubricas": 188
+    },
+    "problemas": {
+      "artigosFaltando": [],
+      "artigosExtras": [],
+      "rubricasMisturadas": [],
+      "possivelRubricaNoTexto": [
+        {
+          "rotulo": "§ 2º",
+          "inicio": "As contribuições recebidas na consulta pública de que trata o § 1º deste artigo ficarão à disposição do público pelo prazo de 2 (dois) anos, contado da data de encerramento da cons"
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "A deliberação de que trata o § 3º deste artigo:"
+        },
+        {
+          "rotulo": "Parágrafo único",
+          "inicio": "As competências privativas previstas no § 2º do art. 22 e no § 4º do art. 24 podem ser delegadas por meio do convênio de que trata o art. 25 deste Código."
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "Para efeito do disposto no § 2o, equiparam-se ao fabricante o montador, o encarroçador, o importador e o revendedor autorizado dos veículos e demais produtos discriminados no § 1o "
+        },
+        {
+          "rotulo": "§ 7º",
+          "inicio": "Para os demais veículos novos, o período de que trata o § 6º deste artigo será de 2 (dois) anos, desde que mantenham suas características originais de fábrica e não se envolvam em "
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "Após a inclusão das informações de que trata o § 4º deste artigo no Certificado de Licenciamento Anual, o veículo somente será licenciado mediante comprovação do atendimento às cam"
+        },
+        {
+          "rotulo": "§ 7º",
+          "inicio": "O Contran, excepcionalmente, poderá prorrogar a exigência do disposto no § 5º deste artigo diante da comprovada falta de peças ou da necessidade de escalonamento para o atendimento"
+        },
+        {
+          "rotulo": "Art. 134º.",
+          "inicio": "No caso de transferência de propriedade, expirado o prazo previsto no § 1º do art. 123 deste Código sem que o novo proprietário tenha tomado as providências necessárias à efetivaçã"
+        },
+        {
+          "rotulo": "III",
+          "inicio": "Categoria C - condutor de veículo abrangido pela categoria B e de veículo motorizado utilizado em transporte de carga cujo peso bruto total exceda a 3.500 kg (três mil e quinhentos"
+        },
+        {
+          "rotulo": "IV",
+          "inicio": "Categoria D - condutor de veículo abrangido pelas categorias B e C e de veículo motorizado utilizado no transporte de passageiros cuja lotação exceda a 8 (oito) lugares, excluído o"
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "O exame previsto no § 2o incluirá avaliação psicológica preliminar e complementar sempre que a ele se submeter o condutor que exerce atividade remunerada ao veículo, incluindo-se e"
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "O resultado positivo no exame previsto no § 2º deste artigo acarretará ao condutor:"
+        },
+        {
+          "rotulo": "Parágrafo único",
+          "inicio": "No caso de não cumprimento do disposto no § 2º do art. 148-A deste Código, configurar-se-á a infração quando o condutor dirigir veículo após o trigésimo dia do vencimento do prazo "
+        },
+        {
+          "rotulo": "Art. 165º-D.",
+          "inicio": "Deixar de realizar o exame toxicológico previsto no § 2º do art. 148-A deste Código, após 30 (trinta) dias do vencimento do prazo estabelecido: Infração - gravíssima;"
+        },
+        {
+          "rotulo": "§ 8º",
+          "inicio": "Após o prazo previsto no § 7º deste artigo, se o infrator não tiver sido identificado, e o veículo for de propriedade de pessoa jurídica, será lavrada nova multa ao proprietário do"
+        },
+        {
+          "rotulo": "§ 9º",
+          "inicio": "O fato de o infrator ser pessoa jurídica não o exime do disposto no § 3º do art. 258 e no art. 259."
+        },
+        {
+          "rotulo": "§ 6º",
+          "inicio": "Concluído o curso de reciclagem previsto no § 5o, o condutor terá eliminados os pontos que lhe tiverem sido atribuídos, para fins de contagem subsequente."
+        },
+        {
+          "rotulo": "§ 7º",
+          "inicio": "O motorista que optar pelo curso previsto no § 5 não poderá fazer nova opção no período de 12 (doze) meses."
+        },
+        {
+          "rotulo": "§ 6º",
+          "inicio": "Não efetuada a regularização no prazo a que se refere o § 2o, será feito registro de restrição administrativa no Renavam por órgão ou entidade executivo de trânsito dos Estados e d"
+        },
+        {
+          "rotulo": "§ 7º",
+          "inicio": "O descumprimento das obrigações estabelecidas no § 2o resultará em recolhimento do veículo ao depósito, aplicando-se, nesse caso, o disposto no art. 271."
+        }
+      ]
+    }
+  },
+  {
+    "codigo": "codigo_penal",
+    "arquivos": {
+      "json": "codigo_penal.json",
+      "html": "del2848.htm",
+      "txt": "codigo_penal.txt"
+    },
+    "jsonValido": true,
+    "jsonError": null,
+    "fonte": {
+      "linhas": 2233,
+      "artigos": 401,
+      "paragrafos": 450,
+      "incisos": 355,
+      "alineas": 73,
+      "candidatasRubrica": 440
+    },
+    "json": {
+      "artigos": 401,
+      "paragrafos": 450,
+      "incisos": 355,
+      "alineas": 73,
+      "rubricas": 616
+    },
+    "problemas": {
+      "artigosFaltando": [],
+      "artigosExtras": [],
+      "rubricasMisturadas": [],
+      "possivelRubricaNoTexto": [
+        {
+          "rotulo": "§ 3º",
+          "inicio": "As tarefas a que se refere o § 1 oserão atribuídas conforme as aptidões do condenado, devendo ser cumpridas à razão de uma hora de tarefa por dia de condenação, fixadas de modo a n"
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Na hipótese do § 1o, as medidas assecuratórias previstas na legislação processual poderão abranger bens ou valores equivalentes do investigado ou acusado para posterior decretação "
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "Na hipótese da reincidência descrita no § 3º deste artigo, o administrador, direta ou indiretamente responsável pela infração cometida, será interditado para o exercício do comérci"
+        },
+        {
+          "rotulo": "Art. 109º.",
+          "inicio": "A prescrição, antes de transitar em julgado a sentença final, salvo o disposto no § 1o do art. 110 deste Código, regula-se pelo máximo da pena privativa de liberdade cominada ao cr"
+        },
+        {
+          "rotulo": "§ 6º",
+          "inicio": "Se o crime de que trata o § 1º deste artigo resulta em lesão corporal de natureza gravíssima e é cometido contra menor de 14 (quatorze) anos ou contra quem, por enfermidade ou defi"
+        },
+        {
+          "rotulo": "§ 7º",
+          "inicio": "Se o crime de que trata o § 2º deste artigo é cometido contra menor de 14 (quatorze) anos ou contra quem não tem o necessário discernimento para a prática do ato, ou que, por qualq"
+        },
+        {
+          "rotulo": "§ 3º-A",
+          "inicio": "No crime previsto no § 3º deste artigo, se cometido no contexto da atuação ou para a consecução das condutas previstas no art. 2º da lei que institui o marco legal do combate ao cr"
+        },
+        {
+          "rotulo": "§ 8º-A",
+          "inicio": "Com exceção do disposto no § 3º-A deste artigo, aumenta-se a pena em 2/3 (dois terços) se a lesão é praticada por integrante de organização criminosa ultraviolenta, grupo paramilit"
+        },
+        {
+          "rotulo": "§ 10º",
+          "inicio": "Nos casos previstos nos §§ 1 oa 3 odeste artigo, se as circunstâncias são as indicadas no § 9 odeste artigo, aumenta-se a pena em 1/3 (um terço)."
+        },
+        {
+          "rotulo": "§ 11º",
+          "inicio": "Na hipótese do § 9º deste artigo, a pena será aumentada de um terço se o crime for cometido contra pessoa portadora de deficiência."
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Somente se procede mediante representação, exceto na hipótese prevista no § 1º deste artigo."
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "Na hipótese do § 3o, aumenta-se a pena de um a dois terços se houver divulgação, comercialização ou transmissão a terceiro, a qualquer título, dos dados ou informações obtidos."
+        },
+        {
+          "rotulo": "§ 4º-C",
+          "inicio": "A pena prevista no § 4º-B deste artigo, considerada a relevância do resultado gravoso:"
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "Se o crime previsto no inciso II do § 3º deste artigo é cometido por integrante de organização criminosa ultraviolenta, grupo paramilitar ou milícia privada, no contexto da atuação"
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "A faculdade prevista no § 3º deste artigo não se aplica aos casos de parcelamento de contribuições cujo valor, inclusive dos acessórios, seja superior àquele estabelecido, administ"
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "A extinção de punibilidade de que trata o § 2º deste artigo não se aplica ao agente declarado devedor contumaz em decisão administrativa definitiva e inscrito no Cadastro Informati"
+        },
+        {
+          "rotulo": "§ 2º-B",
+          "inicio": "A pena prevista no § 2º-A deste artigo, considerada a relevância do resultado gravoso, aumenta-se de 1/3 (um terço) a 2/3 (dois terços), se o crime é praticado mediante a utilizaçã"
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "Na mesma pena do § 1 oincorre quem, com o intuito de lucro direto ou indireto, distribui, vende, expõe à venda, aluga, introduz no País, adquire, oculta, tem em depósito, original "
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "O disposto nos §§ 1 o, 2 oe 3 onão se aplica quando se tratar de exceção ou limitação ao direito de autor ou os que lhe são conexos, em conformidade com o previsto na Lei nº 9.610,"
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "As penas previstas no caput e nos §§ 1º, 3º e 4º deste artigo aplicam-se independentemente do consentimento da vítima, de sua experiência sexual, do fato de ela ter mantido relaçõe"
+        }
+      ]
+    }
+  },
+  {
+    "codigo": "codigo_penal_militar",
+    "arquivos": {
+      "json": "codigo_penal_militar.json",
+      "html": "del1001.htm",
+      "txt": "codigo_penal_militar.txt"
+    },
+    "jsonValido": true,
+    "jsonError": null,
+    "fonte": {
+      "linhas": 2218,
+      "artigos": 401,
+      "paragrafos": 335,
+      "incisos": 213,
+      "alineas": 73,
+      "candidatasRubrica": 601
+    },
+    "json": {
+      "artigos": 401,
+      "paragrafos": 335,
+      "incisos": 213,
+      "alineas": 73,
+      "rubricas": 674
+    },
+    "problemas": {
+      "artigosFaltando": [],
+      "artigosExtras": [],
+      "rubricasMisturadas": [],
+      "possivelRubricaNoTexto": [
+        {
+          "rotulo": "§ 4º",
+          "inicio": "Durante o período previsto no § 3º deste artigo, aplicar-se-á o disposto no art. 92 deste Código."
+        },
+        {
+          "rotulo": "Art. 125º.",
+          "inicio": "A prescrição da pretensão punitiva, salvo o disposto no § 1º deste artigo, regula-se pelo máximo da pena privativa de liberdade cominada ao crime, verificando-se:"
+        },
+        {
+          "rotulo": "Art. 128º.",
+          "inicio": "Interrompida a prescrição, salvo o caso do § 3º, segunda parte, do art. 126, todo o prazo começa a correr, novamente, do dia da interrupção."
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "As penas previstas no caput e no § 1º deste artigo são aplicáveis sem prejuízo das correspondentes à violência."
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "Se os resultados previstos nos §§ 1º e 2º deste artigo forem causados culposamente:"
+        },
+        {
+          "rotulo": null,
+          "inicio": "Seção I - Dos crimes contra a liberdade"
+        },
+        {
+          "rotulo": "§ 6º-A",
+          "inicio": "Na mesma pena do § 6º deste artigo incorre quem subtrai arma, munição, explosivo ou outro material de uso restrito militar ou que contenha sinal indicativo de pertencer a instituiç"
+        },
+        {
+          "rotulo": "§ 7º",
+          "inicio": "Aos casos previstos nos §§ 4º e 5º são aplicáveis as atenuações a que se referem os §§ 1º e 2º, e aos casos previstos nos §§ 6º e 6º-A é aplicável a atenuação referida no § 2º dest"
+        },
+        {
+          "rotulo": "§ 1º",
+          "inicio": "São aplicáveis os §§ 1º e 2º do art. 240."
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "A pena é agravada se ocorre qualquer das hipóteses previstas no § 1º, nº I, do artigo anterior, ou é visada ou atingida qualquer das coisas enumeradas no nº II do mesmo parágrafo."
+        },
+        {
+          "rotulo": "§ 1º",
+          "inicio": "No caso do § 1° do art. 209:"
+        },
+        {
+          "rotulo": "§ 2º",
+          "inicio": "No caso do § 2º do art. 209: Pena - reclusão, de seis a quinze anos."
+        },
+        {
+          "rotulo": "§ 3º",
+          "inicio": "No caso do § 3º do art. 209: Pena - reclusão, de oito a vinte anos no caso de lesão grave; reclusão, de dez a vinte e quatro anos, no caso de morte."
+        },
+        {
+          "rotulo": "§ 4º",
+          "inicio": "No caso do § 4º do art. 209, o juiz pode reduzir a pena de um sexto a um têrço."
+        },
+        {
+          "rotulo": "§ 5º",
+          "inicio": "No caso do § 5º do art. 209, o juiz pode diminuir a pena de um têrço."
+        }
+      ]
+    }
+  }
+]

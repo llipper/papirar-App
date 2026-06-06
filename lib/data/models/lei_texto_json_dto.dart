@@ -1,4 +1,5 @@
 import 'package:papirar/domain/entities/lei_audio_explanation.dart';
+import 'package:papirar/domain/entities/lei_texto.dart';
 
 /// DTO do JSON de leitura (`formato: leitura`).
 class LeiTextoJsonDto {
@@ -7,6 +8,7 @@ class LeiTextoJsonDto {
   final String sigla;
   final List<String> blocos;
   final Map<int, LeiAudioExplanation> audiosPorBloco;
+  final Map<int, List<LeiTextLinkRange>> linksPorBloco;
 
   const LeiTextoJsonDto({
     required this.id,
@@ -14,6 +16,7 @@ class LeiTextoJsonDto {
     required this.sigla,
     required this.blocos,
     this.audiosPorBloco = const {},
+    this.linksPorBloco = const {},
   });
 
   /// Converte `separador` mal escrito no JSON (`"\\n\\n"` → literal `\n\n`).
@@ -37,6 +40,7 @@ class LeiTextoJsonDto {
   factory LeiTextoJsonDto.fromJson(Map<String, dynamic> json) {
     final blocos = <String>[];
     final audiosPorBloco = <int, LeiAudioExplanation>{};
+    final linksPorBloco = <int, List<LeiTextLinkRange>>{};
     final separador = _separadorParagrafos(json);
 
     final blocosRaw = json['blocos'] as List<dynamic>?;
@@ -50,13 +54,27 @@ class LeiTextoJsonDto {
                 .where((p) => p.isNotEmpty)
                 .toList();
             if (partes.isNotEmpty) {
-              blocos.add(partes.join('\n\n'));
+              final blocoIndex = blocos.length;
+              final bloco = partes.join('\n\n');
+              blocos.add(bloco);
+              _setLinksForBloco(
+                linksPorBloco,
+                blocoIndex,
+                _linksFromNode(item, null, bloco),
+              );
             }
             continue;
           }
           final t = item['texto']?.toString();
           if (t != null && t.isNotEmpty) {
-            blocos.add(_normalizarTexto(t));
+            final blocoIndex = blocos.length;
+            final bloco = _normalizarTexto(t);
+            blocos.add(bloco);
+            _setLinksForBloco(
+              linksPorBloco,
+              blocoIndex,
+              _linksFromNode(item, 'texto', bloco),
+            );
           }
         } else if (item is String && item.trim().isNotEmpty) {
           blocos.add(_normalizarTexto(item));
@@ -69,6 +87,7 @@ class LeiTextoJsonDto {
         final rich = _flattenNovoFormatoToBlocos(json);
         blocos.addAll(rich.blocos);
         audiosPorBloco.addAll(rich.audiosPorBloco);
+        linksPorBloco.addAll(rich.linksPorBloco);
       } else if (json['titulos'] != null || json['documento'] != null) {
         final richBlocos = _flattenRichToBlocos(json);
         blocos.addAll(richBlocos);
@@ -107,6 +126,7 @@ class LeiTextoJsonDto {
       sigla: derivedSigla,
       blocos: blocos,
       audiosPorBloco: audiosPorBloco,
+      linksPorBloco: linksPorBloco,
     );
   }
 
@@ -186,28 +206,48 @@ class LeiTextoJsonDto {
     return (id: 'lei_seca', titulo: titulo, sigla: '');
   }
 
-  static ({List<String> blocos, Map<int, LeiAudioExplanation> audiosPorBloco})
+  static ({
+    List<String> blocos,
+    Map<int, LeiAudioExplanation> audiosPorBloco,
+    Map<int, List<LeiTextLinkRange>> linksPorBloco,
+  })
   _flattenNovoFormatoToBlocos(Map<String, dynamic> json) {
     final result = <String>[];
     final audiosPorBloco = <int, LeiAudioExplanation>{};
+    final linksPorBloco = <int, List<LeiTextLinkRange>>{};
 
-    _appendListaTexto(result, json['preambulo']);
-    _appendDivisoes(result, json['divisoes'], audiosPorBloco);
-    _appendDivisao(result, json['adct'], audiosPorBloco);
-    _appendDivisao(result, json['anexo'], audiosPorBloco);
+    _appendListaTexto(result, json['preambulo'], linksPorBloco);
+    _appendDivisoes(result, json['divisoes'], audiosPorBloco, linksPorBloco);
+    _appendDivisao(result, json['adct'], audiosPorBloco, linksPorBloco);
+    _appendDivisao(result, json['anexo'], audiosPorBloco, linksPorBloco);
 
     return (
       blocos: result.where((b) => b.trim().isNotEmpty).toList(),
       audiosPorBloco: audiosPorBloco,
+      linksPorBloco: linksPorBloco,
     );
   }
 
-  static void _appendListaTexto(List<String> result, dynamic value) {
+  static void _appendListaTexto(
+    List<String> result,
+    dynamic value,
+    Map<int, List<LeiTextLinkRange>> linksPorBloco,
+  ) {
     if (value is! List<dynamic>) return;
     for (final item in value) {
       final texto = item is Map<String, dynamic> ? item['texto'] : item;
       final bloco = _normalizarTexto(texto?.toString() ?? '');
-      if (bloco.isNotEmpty) result.add(bloco);
+      if (bloco.isNotEmpty) {
+        final blocoIndex = result.length;
+        result.add(bloco);
+        if (item is Map<String, dynamic>) {
+          _setLinksForBloco(
+            linksPorBloco,
+            blocoIndex,
+            _linksFromNode(item, 'texto', bloco),
+          );
+        }
+      }
     }
   }
 
@@ -215,10 +255,11 @@ class LeiTextoJsonDto {
     List<String> result,
     dynamic value,
     Map<int, LeiAudioExplanation> audiosPorBloco,
+    Map<int, List<LeiTextLinkRange>> linksPorBloco,
   ) {
     if (value is! List<dynamic>) return;
     for (final item in value) {
-      _appendDivisao(result, item, audiosPorBloco);
+      _appendDivisao(result, item, audiosPorBloco, linksPorBloco);
     }
   }
 
@@ -226,6 +267,7 @@ class LeiTextoJsonDto {
     List<String> result,
     dynamic value,
     Map<int, LeiAudioExplanation> audiosPorBloco,
+    Map<int, List<LeiTextLinkRange>> linksPorBloco,
   ) {
     if (value is! Map<String, dynamic>) return;
 
@@ -234,15 +276,16 @@ class LeiTextoJsonDto {
     if (rotulo.isNotEmpty) result.add(rotulo);
     if (titulo.isNotEmpty && titulo != rotulo) result.add(titulo);
 
-    _appendListaTexto(result, value['itens']);
-    _appendArtigos(result, value['artigos'], audiosPorBloco);
-    _appendDivisoes(result, value['divisoes'], audiosPorBloco);
+    _appendListaTexto(result, value['itens'], linksPorBloco);
+    _appendArtigos(result, value['artigos'], audiosPorBloco, linksPorBloco);
+    _appendDivisoes(result, value['divisoes'], audiosPorBloco, linksPorBloco);
   }
 
   static void _appendArtigos(
     List<String> result,
     dynamic value,
     Map<int, LeiAudioExplanation> audiosPorBloco,
+    Map<int, List<LeiTextLinkRange>> linksPorBloco,
   ) {
     if (value is! List<dynamic>) return;
     for (final item in value) {
@@ -260,10 +303,15 @@ class LeiTextoJsonDto {
       final partes = <_BlocoLeiParte>[];
       final rubrica = _normalizarTexto(item['rubrica']?.toString() ?? '');
       if (rubrica.isNotEmpty) {
-        partes.add(_BlocoLeiParte.rubrica(rubrica));
+        partes.add(
+          _BlocoLeiParte.rubrica(
+            rubrica,
+            links: _linksFromNode(item, 'rubrica', rubrica),
+          ),
+        );
       }
       _appendSubtitulos(partes, item['subtitulos']);
-      _appendTexto(partes, item['caput']);
+      _appendTexto(partes, item, 'caput');
       _appendDispositivos(partes, item['penas'], tipo: _TipoDispositivo.pena);
       _appendDispositivos(
         partes,
@@ -281,20 +329,23 @@ class LeiTextoJsonDto {
         tipo: _TipoDispositivo.paragrafo,
       );
 
-      _appendPartes(result, audiosPorBloco, partes);
+      _appendPartes(result, audiosPorBloco, linksPorBloco, partes);
     }
   }
 
   static void _appendPartes(
     List<String> result,
     Map<int, LeiAudioExplanation> audiosPorBloco,
+    Map<int, List<LeiTextLinkRange>> linksPorBloco,
     List<_BlocoLeiParte> partes,
   ) {
     final buffer = <_BlocoLeiParte>[];
 
     void flushBuffer() {
       if (buffer.isEmpty) return;
+      final blocoIndex = result.length;
       result.add(buffer.map((p) => p.texto).join('\n\n'));
+      _setLinksForBloco(linksPorBloco, blocoIndex, _linksForPartes(buffer));
       buffer.clear();
     }
 
@@ -309,10 +360,14 @@ class LeiTextoJsonDto {
           : null;
       flushBuffer();
       final blocoIndex = result.length;
-      result.add(
-        pendingRubrica == null
-            ? parte.texto
-            : '${pendingRubrica.texto}\n\n${parte.texto}',
+      final blocoPartes = pendingRubrica == null
+          ? [parte]
+          : [pendingRubrica, parte];
+      result.add(blocoPartes.map((p) => p.texto).join('\n\n'));
+      _setLinksForBloco(
+        linksPorBloco,
+        blocoIndex,
+        _linksForPartes(blocoPartes),
       );
       audiosPorBloco[blocoIndex] = parte.audio!;
     }
@@ -369,7 +424,14 @@ class LeiTextoJsonDto {
       if (item is! Map<String, dynamic>) continue;
 
       final rubrica = _normalizarTexto(item['rubrica']?.toString() ?? '');
-      if (rubrica.isNotEmpty) result.add(_BlocoLeiParte.rubrica(rubrica));
+      if (rubrica.isNotEmpty) {
+        result.add(
+          _BlocoLeiParte.rubrica(
+            rubrica,
+            links: _linksFromNode(item, 'rubrica', rubrica),
+          ),
+        );
+      }
       _appendSubtitulos(result, item['subtitulos']);
 
       final texto = _normalizarTexto(item['texto']?.toString() ?? '');
@@ -384,6 +446,7 @@ class LeiTextoJsonDto {
           _BlocoLeiParte(
             linha,
             audio: _parseAudio(item['audio'], _fallbackAudioTitle(tipo, item)),
+            links: _linksFromNode(item, 'texto', linha),
           ),
         );
       }
@@ -407,9 +470,17 @@ class LeiTextoJsonDto {
     }
   }
 
-  static void _appendTexto(List<_BlocoLeiParte> result, dynamic value) {
-    final texto = _normalizarTexto(value?.toString() ?? '');
-    if (texto.isNotEmpty) result.add(_BlocoLeiParte(texto));
+  static void _appendTexto(
+    List<_BlocoLeiParte> result,
+    Map<String, dynamic> item,
+    String key,
+  ) {
+    final texto = _normalizarTexto(item[key]?.toString() ?? '');
+    if (texto.isNotEmpty) {
+      result.add(
+        _BlocoLeiParte(texto, links: _linksFromNode(item, key, texto)),
+      );
+    }
   }
 
   static void _appendSubtitulos(List<_BlocoLeiParte> result, dynamic value) {
@@ -417,7 +488,16 @@ class LeiTextoJsonDto {
     for (final item in value) {
       final texto = item is Map<String, dynamic> ? item['texto'] : item;
       final bloco = _normalizarTexto(texto?.toString() ?? '');
-      if (bloco.isNotEmpty) result.add(_BlocoLeiParte(bloco));
+      if (bloco.isNotEmpty) {
+        result.add(
+          _BlocoLeiParte(
+            bloco,
+            links: item is Map<String, dynamic>
+                ? _linksFromNode(item, 'texto', bloco)
+                : const [],
+          ),
+        );
+      }
     }
   }
 
@@ -723,6 +803,94 @@ class LeiTextoJsonDto {
 
     return result;
   }
+
+  static List<LeiTextLinkRange> _linksFromNode(
+    Map<String, dynamic> node,
+    String? field,
+    String renderedText,
+  ) {
+    final rawLinks = node['links'];
+    if (rawLinks is! List<dynamic> || renderedText.isEmpty) return const [];
+
+    final ranges = <LeiTextLinkRange>[];
+    final seen = <String>{};
+
+    for (final item in rawLinks) {
+      if (item is! Map<String, dynamic>) continue;
+
+      final linkField = item['campo']?.toString();
+      if (field != null && linkField != null && linkField != field) continue;
+
+      final linkText = _normalizarTexto(item['texto']?.toString() ?? '');
+      final href = item['href']?.toString().trim() ?? '';
+      if (linkText.isEmpty || href.isEmpty) continue;
+
+      final startRaw = item['inicio'];
+      final endRaw = item['fim'];
+      if (startRaw is num && endRaw is num) {
+        final start = startRaw.toInt();
+        final end = endRaw.toInt();
+        if (start >= 0 && end > start && end <= renderedText.length) {
+          final key = '$start:$end:$href';
+          if (seen.add(key)) {
+            ranges.add(
+              LeiTextLinkRange(startOffset: start, endOffset: end, href: href),
+            );
+          }
+          continue;
+        }
+      }
+
+      var cursor = 0;
+      while (cursor < renderedText.length) {
+        final start = renderedText.indexOf(linkText, cursor);
+        if (start < 0) break;
+
+        final end = start + linkText.length;
+        final key = '$start:$end:$href';
+        if (seen.add(key)) {
+          ranges.add(
+            LeiTextLinkRange(startOffset: start, endOffset: end, href: href),
+          );
+        }
+        cursor = end;
+      }
+    }
+
+    ranges.sort((a, b) => a.startOffset.compareTo(b.startOffset));
+    return ranges;
+  }
+
+  static List<LeiTextLinkRange> _linksForPartes(List<_BlocoLeiParte> partes) {
+    final ranges = <LeiTextLinkRange>[];
+    var offset = 0;
+
+    for (var i = 0; i < partes.length; i++) {
+      final parte = partes[i];
+      for (final link in parte.links) {
+        ranges.add(
+          LeiTextLinkRange(
+            startOffset: offset + link.startOffset,
+            endOffset: offset + link.endOffset,
+            href: link.href,
+          ),
+        );
+      }
+      offset += parte.texto.length;
+      if (i < partes.length - 1) offset += 2;
+    }
+
+    return ranges;
+  }
+
+  static void _setLinksForBloco(
+    Map<int, List<LeiTextLinkRange>> linksPorBloco,
+    int blocoIndex,
+    List<LeiTextLinkRange> links,
+  ) {
+    if (links.isEmpty) return;
+    linksPorBloco[blocoIndex] = List.unmodifiable(links);
+  }
 }
 
 enum _TipoDispositivo { pena, paragrafo, inciso, alinea }
@@ -731,8 +899,12 @@ class _BlocoLeiParte {
   final String texto;
   final LeiAudioExplanation? audio;
   final bool isRubrica;
+  final List<LeiTextLinkRange> links;
 
-  const _BlocoLeiParte(this.texto, {this.audio}) : isRubrica = false;
+  const _BlocoLeiParte(this.texto, {this.audio, this.links = const []})
+    : isRubrica = false;
 
-  const _BlocoLeiParte.rubrica(this.texto) : audio = null, isRubrica = true;
+  const _BlocoLeiParte.rubrica(this.texto, {this.links = const []})
+    : audio = null,
+      isRubrica = true;
 }

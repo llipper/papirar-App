@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:papirar/domain/entities/lei_texto.dart';
 import 'package:papirar/features/lei_seca/audio/lei_audio_explanation.dart';
 import 'package:papirar/features/lei_seca/audio/lei_audio_explanations.dart';
 import 'package:papirar/features/lei_seca/config/lei_reading_layout_config.dart';
@@ -15,6 +16,7 @@ class LeiReadingParagraph extends StatelessWidget {
   final LeiReadingStyles styles;
   final String leiId;
   final List<LeiHighlight> highlights;
+  final List<LeiTextLinkRange> links;
   final Future<void> Function(CreateLeiHighlightInput input) onHighlight;
   final Future<void> Function(LeiHighlightRangeInput input) onRemoveHighlight;
   final LeiAudioExplanation? audioExplanation;
@@ -22,6 +24,7 @@ class LeiReadingParagraph extends StatelessWidget {
   final String? rubricaText;
   final int? rubricaPartIndex;
   final List<LeiHighlight> rubricaHighlights;
+  final List<LeiTextLinkRange> rubricaLinks;
 
   const LeiReadingParagraph({
     super.key,
@@ -32,6 +35,7 @@ class LeiReadingParagraph extends StatelessWidget {
     required this.styles,
     required this.leiId,
     required this.highlights,
+    this.links = const [],
     required this.onHighlight,
     required this.onRemoveHighlight,
     this.audioExplanation,
@@ -39,6 +43,7 @@ class LeiReadingParagraph extends StatelessWidget {
     this.rubricaText,
     this.rubricaPartIndex,
     this.rubricaHighlights = const [],
+    this.rubricaLinks = const [],
   });
 
   @override
@@ -63,6 +68,7 @@ class LeiReadingParagraph extends StatelessWidget {
           blocoIndex: blocoIndex,
           partIndex: partIndex,
           highlights: highlights,
+          links: links,
           onHighlight: onHighlight,
           onRemoveHighlight: onRemoveHighlight,
           textAlign: TextAlign.justify,
@@ -147,6 +153,7 @@ class LeiReadingParagraph extends StatelessWidget {
                 blocoIndex: blocoIndex,
                 partIndex: rubricaPartIndex ?? partIndex,
                 highlights: rubricaHighlights,
+                links: rubricaLinks,
                 onHighlight: onHighlight,
                 onRemoveHighlight: onRemoveHighlight,
                 baseStyle: _rubricaStyleFor(text),
@@ -158,6 +165,7 @@ class LeiReadingParagraph extends StatelessWidget {
               blocoIndex: blocoIndex,
               partIndex: partIndex,
               highlights: highlights,
+              links: links,
               onHighlight: onHighlight,
               onRemoveHighlight: onRemoveHighlight,
               textAlign: TextAlign.justify,
@@ -173,6 +181,7 @@ class LeiReadingParagraph extends StatelessWidget {
           blocoIndex: blocoIndex,
           partIndex: partIndex,
           highlights: highlights,
+          links: links,
           onHighlight: onHighlight,
           onRemoveHighlight: onRemoveHighlight,
           textAlign: TextAlign.justify,
@@ -190,11 +199,13 @@ class LeiReadingParagraph extends StatelessWidget {
         blocoIndex: blocoIndex,
         partIndex: partIndex,
         highlights: highlights,
+        links: links,
         onHighlight: onHighlight,
         onRemoveHighlight: onRemoveHighlight,
         rubricaText: rubricaText,
         rubricaPartIndex: rubricaPartIndex,
         rubricaHighlights: rubricaHighlights,
+        rubricaLinks: rubricaLinks,
         rubricaPadding: _rubricaPaddingFor(text),
         rubricaStyle: _rubricaStyleFor(text),
       );
@@ -286,11 +297,13 @@ class _ParagraphWithAudioButton extends StatelessWidget {
   final int blocoIndex;
   final int partIndex;
   final List<LeiHighlight> highlights;
+  final List<LeiTextLinkRange> links;
   final Future<void> Function(CreateLeiHighlightInput input) onHighlight;
   final Future<void> Function(LeiHighlightRangeInput input) onRemoveHighlight;
   final String? rubricaText;
   final int? rubricaPartIndex;
   final List<LeiHighlight> rubricaHighlights;
+  final List<LeiTextLinkRange> rubricaLinks;
   final EdgeInsets rubricaPadding;
   final TextStyle rubricaStyle;
 
@@ -303,11 +316,13 @@ class _ParagraphWithAudioButton extends StatelessWidget {
     required this.blocoIndex,
     required this.partIndex,
     required this.highlights,
+    required this.links,
     required this.onHighlight,
     required this.onRemoveHighlight,
     this.rubricaText,
     this.rubricaPartIndex,
     this.rubricaHighlights = const [],
+    this.rubricaLinks = const [],
     required this.rubricaPadding,
     required this.rubricaStyle,
   });
@@ -329,6 +344,7 @@ class _ParagraphWithAudioButton extends StatelessWidget {
         blocoIndex: blocoIndex,
         partIndex: partIndex,
         highlights: highlights,
+        links: links,
         onHighlight: onHighlight,
         onRemoveHighlight: onRemoveHighlight,
       );
@@ -346,6 +362,7 @@ class _ParagraphWithAudioButton extends StatelessWidget {
               blocoIndex: blocoIndex,
               partIndex: rubricaPartIndex ?? partIndex,
               highlights: rubricaHighlights,
+              links: rubricaLinks,
               onHighlight: onHighlight,
               onRemoveHighlight: onRemoveHighlight,
               baseStyle: rubricaStyle,
@@ -366,6 +383,7 @@ class _ParagraphWithAudioButton extends StatelessWidget {
       strongPrefixStyle: strongPrefixStyle,
       explanation: explanation,
       highlights: highlights,
+      links: links,
       leiId: leiId,
       blocoIndex: blocoIndex,
       partIndex: partIndex,
@@ -374,6 +392,7 @@ class _ParagraphWithAudioButton extends StatelessWidget {
       rubricaText: rubricaText,
       rubricaPartIndex: rubricaPartIndex,
       rubricaHighlights: rubricaHighlights,
+      rubricaLinks: rubricaLinks,
       rubricaPadding: rubricaPadding,
       rubricaStyle: rubricaStyle,
     );
@@ -394,6 +413,31 @@ List<_MarkedTextSegment>? _spansForStrongPrefix(
   ];
 }
 
+List<LeiTextLinkRange> _linksWithin(
+  List<LeiTextLinkRange> links,
+  int start,
+  int end,
+) {
+  if (links.isEmpty || start >= end) return const [];
+
+  final localLinks = <LeiTextLinkRange>[];
+  for (final link in links) {
+    if (link.endOffset <= start || link.startOffset >= end) continue;
+    final localStart = (link.startOffset - start).clamp(0, end - start).toInt();
+    final localEnd = (link.endOffset - start).clamp(0, end - start).toInt();
+    if (localStart >= localEnd) continue;
+    localLinks.add(
+      LeiTextLinkRange(
+        startOffset: localStart,
+        endOffset: localEnd,
+        href: link.href,
+      ),
+    );
+  }
+
+  return localLinks;
+}
+
 class _ParagraphLabelAudioText extends StatelessWidget {
   final String label;
   final String body;
@@ -401,6 +445,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
   final TextStyle strongPrefixStyle;
   final LeiAudioExplanation explanation;
   final List<LeiHighlight> highlights;
+  final List<LeiTextLinkRange> links;
   final String leiId;
   final int blocoIndex;
   final int partIndex;
@@ -409,6 +454,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
   final String? rubricaText;
   final int? rubricaPartIndex;
   final List<LeiHighlight> rubricaHighlights;
+  final List<LeiTextLinkRange> rubricaLinks;
   final EdgeInsets rubricaPadding;
   final TextStyle rubricaStyle;
 
@@ -419,6 +465,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
     required this.strongPrefixStyle,
     required this.explanation,
     required this.highlights,
+    required this.links,
     required this.leiId,
     required this.blocoIndex,
     required this.partIndex,
@@ -427,6 +474,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
     this.rubricaText,
     this.rubricaPartIndex,
     this.rubricaHighlights = const [],
+    this.rubricaLinks = const [],
     required this.rubricaPadding,
     required this.rubricaStyle,
   });
@@ -450,6 +498,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
                 blocoIndex: blocoIndex,
                 partIndex: partIndex,
                 highlights: highlights,
+                links: _linksWithin(links, 0, label.length),
                 onHighlight: onHighlight,
                 onRemoveHighlight: onRemoveHighlight,
                 baseStyle: style,
@@ -475,6 +524,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
               blocoIndex: blocoIndex,
               partIndex: rubricaPartIndex ?? partIndex,
               highlights: rubricaHighlights,
+              links: rubricaLinks,
               onHighlight: onHighlight,
               onRemoveHighlight: onRemoveHighlight,
               baseStyle: rubricaStyle,
@@ -487,6 +537,11 @@ class _ParagraphLabelAudioText extends StatelessWidget {
               blocoIndex: blocoIndex,
               partIndex: partIndex,
               highlights: highlights,
+              links: _linksWithin(
+                links,
+                label.length + 1,
+                label.length + 1 + body.length,
+              ),
               onHighlight: onHighlight,
               onRemoveHighlight: onRemoveHighlight,
               baseStyle: style,
@@ -506,6 +561,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
         blocoIndex: blocoIndex,
         partIndex: partIndex,
         highlights: highlights,
+        links: links,
         onHighlight: onHighlight,
         onRemoveHighlight: onRemoveHighlight,
         textAlign: TextAlign.justify,
@@ -527,6 +583,7 @@ class _ParagraphLabelAudioText extends StatelessWidget {
           blocoIndex: blocoIndex,
           partIndex: partIndex,
           highlights: highlights,
+          links: _linksWithin(links, 0, label.length),
           onHighlight: onHighlight,
           onRemoveHighlight: onRemoveHighlight,
           baseStyle: strongPrefixStyle,
@@ -544,6 +601,11 @@ class _ParagraphLabelAudioText extends StatelessWidget {
             blocoIndex: blocoIndex,
             partIndex: partIndex,
             highlights: highlights,
+            links: _linksWithin(
+              links,
+              label.length + 1,
+              label.length + 1 + body.length,
+            ),
             onHighlight: onHighlight,
             onRemoveHighlight: onRemoveHighlight,
             baseStyle: style,
@@ -564,6 +626,7 @@ class _TextWithAudioButton extends StatelessWidget {
   final int blocoIndex;
   final int partIndex;
   final List<LeiHighlight> highlights;
+  final List<LeiTextLinkRange> links;
   final Future<void> Function(CreateLeiHighlightInput input) onHighlight;
   final Future<void> Function(LeiHighlightRangeInput input) onRemoveHighlight;
 
@@ -576,6 +639,7 @@ class _TextWithAudioButton extends StatelessWidget {
     required this.blocoIndex,
     required this.partIndex,
     required this.highlights,
+    this.links = const [],
     required this.onHighlight,
     required this.onRemoveHighlight,
     this.alignment = WrapAlignment.start,
@@ -583,8 +647,6 @@ class _TextWithAudioButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final inlineAudioParts = _splitAudioPrefix(text);
-
     if (explanation == null ||
         LeiReadingLayoutConfig.audioPosition ==
             LeiReadingAudioPosition.hidden) {
@@ -594,6 +656,7 @@ class _TextWithAudioButton extends StatelessWidget {
         blocoIndex: blocoIndex,
         partIndex: partIndex,
         highlights: highlights,
+        links: links,
         onHighlight: onHighlight,
         onRemoveHighlight: onRemoveHighlight,
         textAlign: alignment == WrapAlignment.center
@@ -605,44 +668,13 @@ class _TextWithAudioButton extends StatelessWidget {
     }
 
     final audioButton = LeiAudioExplanationButton(explanation: explanation!);
-    if (inlineAudioParts != null) {
-      return Wrap(
-        alignment: alignment,
-        crossAxisAlignment: WrapCrossAlignment.center,
-        spacing: LeiReadingLayoutConfig.audioTextSpacing,
-        children: [
-          _SelectableMarkedText(
-            text: inlineAudioParts.label,
-            leiId: leiId,
-            blocoIndex: blocoIndex,
-            partIndex: partIndex,
-            highlights: highlights,
-            onHighlight: onHighlight,
-            onRemoveHighlight: onRemoveHighlight,
-            baseStyle: spans?.first.style ?? style,
-          ),
-          audioButton,
-          _SelectableMarkedText(
-            text: inlineAudioParts.body,
-            leiId: leiId,
-            blocoIndex: blocoIndex,
-            partIndex: partIndex,
-            highlights: highlights,
-            onHighlight: onHighlight,
-            onRemoveHighlight: onRemoveHighlight,
-            baseStyle: style,
-            offsetBase: inlineAudioParts.bodyOffset,
-          ),
-        ],
-      );
-    }
-
     final textWidget = _SelectableMarkedText(
       text: text,
       leiId: leiId,
       blocoIndex: blocoIndex,
       partIndex: partIndex,
       highlights: highlights,
+      links: links,
       onHighlight: onHighlight,
       onRemoveHighlight: onRemoveHighlight,
       baseStyle: style,
@@ -675,33 +707,6 @@ class _TextWithAudioButton extends StatelessWidget {
   }
 }
 
-_InlineAudioParts? _splitAudioPrefix(String text) {
-  final match = RegExp(r'^(\s*[IVXLCDM]+)\s*-\s*(.+)$').firstMatch(text);
-  if (match == null) return null;
-
-  final label = match.group(1)!.trim();
-  final body = match.group(2)!.trim();
-  if (body.isEmpty) return null;
-
-  return _InlineAudioParts(
-    label: label,
-    body: body,
-    bodyOffset: match.start + match.group(0)!.indexOf(body),
-  );
-}
-
-class _InlineAudioParts {
-  final String label;
-  final String body;
-  final int bodyOffset;
-
-  const _InlineAudioParts({
-    required this.label,
-    required this.body,
-    required this.bodyOffset,
-  });
-}
-
 class _MarkedTextSegment {
   final int start;
   final int end;
@@ -716,6 +721,7 @@ class _SelectableMarkedText extends StatefulWidget {
   final int blocoIndex;
   final int partIndex;
   final List<LeiHighlight> highlights;
+  final List<LeiTextLinkRange> links;
   final Future<void> Function(CreateLeiHighlightInput input) onHighlight;
   final Future<void> Function(LeiHighlightRangeInput input) onRemoveHighlight;
   final TextAlign textAlign;
@@ -729,6 +735,7 @@ class _SelectableMarkedText extends StatefulWidget {
     required this.blocoIndex,
     required this.partIndex,
     required this.highlights,
+    this.links = const [],
     required this.onHighlight,
     required this.onRemoveHighlight,
     this.textAlign = TextAlign.start,
@@ -747,7 +754,7 @@ class _SelectableMarkedTextState extends State<_SelectableMarkedText> {
   @override
   Widget build(BuildContext context) {
     return SelectableText.rich(
-      TextSpan(children: _buildSpans()),
+      TextSpan(children: _buildSpans(context)),
       textAlign: widget.textAlign,
       onSelectionChanged: (selection, _) {
         _selection = selection;
@@ -825,15 +832,16 @@ class _SelectableMarkedTextState extends State<_SelectableMarkedText> {
     );
   }
 
-  List<InlineSpan> _buildSpans() {
+  List<InlineSpan> _buildSpans(BuildContext context) {
     final segments =
         widget.spans ??
         [_MarkedTextSegment(0, widget.text.length, widget.baseStyle!)];
     final spans = <InlineSpan>[];
+    final linkColor = Theme.of(context).colorScheme.primary;
 
     for (final segment in segments) {
-      final start = segment.start.clamp(0, widget.text.length);
-      final end = segment.end.clamp(0, widget.text.length);
+      final start = segment.start.clamp(0, widget.text.length).toInt();
+      final end = segment.end.clamp(0, widget.text.length).toInt();
       if (start >= end) continue;
 
       final globalStart = widget.offsetBase + start;
@@ -845,43 +853,69 @@ class _SelectableMarkedTextState extends State<_SelectableMarkedText> {
               )
               .toList()
             ..sort((a, b) => a.startOffset.compareTo(b.startOffset));
+      final links =
+          widget.links
+              .where((link) => link.endOffset > start && link.startOffset < end)
+              .toList()
+            ..sort((a, b) => a.startOffset.compareTo(b.startOffset));
 
-      var cursor = start;
+      final boundaries = <int>{start, end};
       for (final highlight in highlights) {
         final highlightStart = (highlight.startOffset - widget.offsetBase)
-            .clamp(start, end);
-        final highlightEnd = (highlight.endOffset - widget.offsetBase).clamp(
-          start,
-          end,
-        );
-        if (highlightStart > cursor) {
-          spans.add(
-            TextSpan(
-              text: widget.text.substring(cursor, highlightStart),
-              style: segment.style,
-            ),
-          );
-        }
-        if (highlightEnd > highlightStart) {
-          spans.add(
-            TextSpan(
-              text: widget.text.substring(highlightStart, highlightEnd),
-              style: segment.style.copyWith(
-                backgroundColor: highlight.color.backgroundColor.withValues(
-                  alpha: 0.58,
-                ),
-              ),
-            ),
-          );
-          cursor = highlightEnd;
-        }
+            .clamp(start, end)
+            .toInt();
+        final highlightEnd = (highlight.endOffset - widget.offsetBase)
+            .clamp(start, end)
+            .toInt();
+        boundaries.add(highlightStart);
+        boundaries.add(highlightEnd);
+      }
+      for (final link in links) {
+        boundaries.add(link.startOffset.clamp(start, end).toInt());
+        boundaries.add(link.endOffset.clamp(start, end).toInt());
       }
 
-      if (cursor < end) {
+      final orderedBoundaries = boundaries.toList()..sort();
+      for (var i = 0; i < orderedBoundaries.length - 1; i++) {
+        final partStart = orderedBoundaries[i];
+        final partEnd = orderedBoundaries[i + 1];
+        if (partStart >= partEnd) continue;
+
+        LeiHighlight? highlight;
+        for (final candidate in highlights) {
+          final localStart = candidate.startOffset - widget.offsetBase;
+          final localEnd = candidate.endOffset - widget.offsetBase;
+          if (localEnd > partStart && localStart < partEnd) {
+            highlight = candidate;
+            break;
+          }
+        }
+        final hasLink = links.any(
+          (link) => link.endOffset > partStart && link.startOffset < partEnd,
+        );
+
+        var style = segment.style;
+        if (hasLink) {
+          style = style.copyWith(
+            color: linkColor,
+            fontWeight: FontWeight.w700,
+            decoration: TextDecoration.underline,
+            decorationColor: linkColor,
+            decorationThickness: 1.2,
+          );
+        }
+        if (highlight != null) {
+          style = style.copyWith(
+            backgroundColor: highlight.color.backgroundColor.withValues(
+              alpha: 0.58,
+            ),
+          );
+        }
+
         spans.add(
           TextSpan(
-            text: widget.text.substring(cursor, end),
-            style: segment.style,
+            text: widget.text.substring(partStart, partEnd),
+            style: style,
           ),
         );
       }

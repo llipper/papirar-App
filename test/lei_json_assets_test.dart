@@ -75,10 +75,10 @@ void main() {
       final dto = LeiTextoJsonDto.fromJson(map);
 
       final incisoIIndex = dto.blocos.indexWhere(
-        (bloco) => bloco.startsWith('I os crimes:'),
+        (bloco) => bloco.startsWith('I - os crimes:'),
       );
       final paragrafo1Index = dto.blocos.indexWhere(
-        (bloco) => bloco.startsWith('§ 1º Nos casos do inciso I'),
+        (bloco) => bloco.startsWith('§ 1º - Nos casos do inciso I'),
       );
 
       expect(incisoIIndex, isNonNegative);
@@ -93,7 +93,7 @@ void main() {
     final map = jsonDecode(raw) as Map<String, dynamic>;
     final dto = LeiTextoJsonDto.fromJson(map);
 
-    final art2Index = dto.blocos.indexOf('Art. 2º');
+    final art2Index = dto.blocos.indexWhere((bloco) => bloco == 'Art. 2º.');
 
     expect(art2Index, isNonNegative);
     expect(dto.blocos[art2Index + 1], startsWith('Lei penal no tempo\n\n'));
@@ -149,10 +149,14 @@ void main() {
       MaterialApp(
         home: Scaffold(
           body: LeiReadingBlocoItem(
+            blocoIndex: 0,
             bloco: 'Crime consumado\n\nI texto do inciso.',
             useDropCap: false,
             styles: styles,
             leiId: 'lei_teste',
+            highlightsByPart: const {},
+            onHighlight: (_) async {},
+            onRemoveHighlight: (_) async {},
             audioExplanation: const LeiAudioExplanation(
               id: 'audio-inciso-i',
               title: 'Explicação',

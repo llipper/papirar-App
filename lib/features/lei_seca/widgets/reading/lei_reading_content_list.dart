@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:papirar/domain/entities/lei_audio_explanation.dart';
+import 'package:papirar/domain/entities/lei_texto.dart';
 import 'package:papirar/features/lei_seca/config/lei_reading_layout_config.dart';
 import 'package:papirar/features/lei_seca/highlights/domain/lei_highlight.dart';
 import 'package:papirar/features/lei_seca/utils/lei_reading_styles.dart';
@@ -11,6 +12,7 @@ class LeiReadingContentList extends StatelessWidget {
   final ScrollController scrollController;
   final List<String> blocos;
   final Map<int, LeiAudioExplanation> audiosPorBloco;
+  final Map<int, List<LeiTextLinkRange>> linksPorBloco;
   final String leiId;
   final String sigla;
   final String titulo;
@@ -26,6 +28,7 @@ class LeiReadingContentList extends StatelessWidget {
     required this.scrollController,
     required this.blocos,
     required this.audiosPorBloco,
+    required this.linksPorBloco,
     required this.leiId,
     required this.sigla,
     required this.titulo,
@@ -66,6 +69,7 @@ class LeiReadingContentList extends StatelessWidget {
         return LeiReadingBlocoItem(
           blocoIndex: blocoIndex,
           bloco: blocos[blocoIndex],
+          links: linksPorBloco[blocoIndex] ?? const [],
           useDropCap: blocoIndex == dropCapIndex,
           styles: styles,
           leiId: leiId,

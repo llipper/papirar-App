@@ -16,6 +16,125 @@ function cleanText(value) {
     .trim()
 }
 
+function decodeHtmlEntities(value) {
+  return value
+    .replace(/&nbsp;|&#160;/gi, " ")
+    .replace(/&ordm;|&#186;/gi, "º")
+    .replace(/&ordf;|&#170;/gi, "ª")
+    .replace(/&sect;|&#167;/gi, "§")
+    .replace(/&amp;/gi, "&")
+    .replace(/&quot;/gi, '"')
+    .replace(/&#39;/gi, "'")
+    .replace(/&lt;/gi, "<")
+    .replace(/&gt;/gi, ">")
+}
+
+function htmlToText(value) {
+  return cleanText(
+    decodeHtmlEntities(
+      value
+        .replace(/<script[\s\S]*?<\/script>/gi, " ")
+        .replace(/<style[\s\S]*?<\/style>/gi, " ")
+        .replace(/<[^>]+>/g, " "),
+    ),
+  )
+}
+
+function extractHtmlLinks(html) {
+  if (!html) return []
+
+  const links = []
+  const seen = new Set()
+  const regex = /<a\b([^>]*)>([\s\S]*?)<\/a>/gi
+  let match
+
+  while ((match = regex.exec(html))) {
+    const attrs = match[1] || ""
+    const hrefMatch = attrs.match(/\bhref\s*=\s*(["'])(.*?)\1/i)
+    if (!hrefMatch) continue
+
+    const href = decodeHtmlEntities(hrefMatch[2]).trim()
+    const texto = htmlToText(match[2])
+    if (!href || !texto) continue
+
+    const key = `${texto}::${href}`
+    if (seen.has(key)) continue
+    seen.add(key)
+    links.push({ texto, href })
+  }
+
+  return links
+}
+
+function hasTokenBoundary(value, start, end) {
+  const before = start > 0 ? value[start - 1] : ""
+  const after = end < value.length ? value[end] : ""
+  return !/[A-Za-zÀ-ÿ0-9]/.test(before) && !/[A-Za-zÀ-ÿ0-9]/.test(after)
+}
+
+function findLinkOccurrences(value, linkText) {
+  const occurrences = []
+  if (!value || !linkText) return occurrences
+
+  let cursor = 0
+  while (cursor < value.length) {
+    const start = value.indexOf(linkText, cursor)
+    if (start < 0) break
+
+    const end = start + linkText.length
+    if (linkText.length >= 4 || hasTokenBoundary(value, start, end)) {
+      occurrences.push({ start, end })
+    }
+    cursor = end
+  }
+
+  return occurrences
+}
+
+function annotateFieldLinks(node, field, htmlLinks) {
+  const value = typeof node[field] === "string" ? node[field] : ""
+  if (!value) return
+
+  const links = []
+  const seen = new Set()
+
+  for (const link of htmlLinks) {
+    for (const occurrence of findLinkOccurrences(value, link.texto)) {
+      const key = `${field}:${occurrence.start}:${occurrence.end}:${link.href}`
+      if (seen.has(key)) continue
+      seen.add(key)
+      links.push({
+        campo: field,
+        texto: link.texto,
+        href: link.href,
+        inicio: occurrence.start,
+        fim: occurrence.end,
+      })
+    }
+  }
+
+  if (!links.length) return
+  node.links = [...(Array.isArray(node.links) ? node.links : []), ...links]
+}
+
+function annotateHtmlLinks(node, htmlLinks) {
+  if (!node || typeof node !== "object" || !htmlLinks.length) return
+
+  if (Array.isArray(node)) {
+    node.forEach((item) => annotateHtmlLinks(item, htmlLinks))
+    return
+  }
+
+  for (const field of ["texto", "caput", "rubrica", "titulo", "ementa"]) {
+    annotateFieldLinks(node, field, htmlLinks)
+  }
+
+  for (const [key, child] of Object.entries(node)) {
+    if (key === "links") continue
+    if (child && typeof child === "object") annotateHtmlLinks(child, htmlLinks)
+  }
+}
+
 function isVisualOnly(value) {
   const t = value.replace(/\s+/g, "")
   return !t || /^\.+$/.test(t) || /^["“”]+$/.test(t)
@@ -31,7 +150,7 @@ function isFooterLine(value) {
 }
 
 function normalizeHeading(value) {
-  return value
+  const normalized = value
     .replace(/ç/g, "Ç")
     .replace(/ã/g, "Ã")
     .replace(/á/g, "Á")
@@ -42,6 +161,11 @@ function normalizeHeading(value) {
     .replace(/â/g, "Â")
     .replace(/ê/g, "Ê")
     .replace(/ô/g, "Ô")
+  const compact = normalized.replace(/\s+/g, "")
+  if (/^PARTE[A-ZÁÉÍÓÚÂÊÔÃÕÇ]+$/.test(compact)) {
+    return compact.replace(/^PARTE/, "PARTE ")
+  }
+  return normalized
 }
 
 function headingOf(line) {
@@ -66,12 +190,13 @@ function headingOf(line) {
 
 function articleOf(line) {
   const match = line.match(
-    /^Art\.?\s*([\d]+(?:-[A-Z])?(?:[º°o])?)\.?\s*(.*)$/i,
+    /^Art\.?\s*(\d+)\s*(?:[º°o])?\s*(?:-([A-Z]))?\.?\s*(.*)$/i,
   )
   if (!match) return null
-  const numero = match[1].replace(/[°o]$/i, "º")
-  const rotulo = numero.endsWith("º") ? `Art. ${numero}` : `Art. ${numero}.`
-  return { numero, rotulo, texto: cleanText(match[2]) }
+  const numeroBase = match[1]
+  const sufixo = match[2] ? `-${match[2].toUpperCase()}` : ""
+  const numero = `${numeroBase}º${sufixo}`
+  return { numero, rotulo: `Art. ${numero}.`, texto: cleanText(match[3]) }
 }
 
 function paragraphOf(line) {
@@ -84,10 +209,10 @@ function paragraphOf(line) {
     }
   }
 
-  const match = line.match(/^§\s*([\d]+(?:-[A-Z])?[º°o]?)\s*(.*)$/i)
+  const match = line.match(/^§\s*(\d+)\s*(?:[º°o])?\s*(?:-([A-Z]))?\.?\s*(.*)$/i)
   if (!match) return null
-  const numero = match[1].replace(/[°o]$/i, "º")
-  return { numero, rotulo: `§ ${numero}`, texto: cleanText(match[2]) }
+  const numero = `${match[1]}º${match[2] ? `-${match[2].toUpperCase()}` : ""}`
+  return { numero, rotulo: `§ ${numero}`, texto: cleanText(match[3]) }
 }
 
 function incisoOf(line) {
@@ -170,6 +295,12 @@ function collectArticles(divisions, target = []) {
   return target
 }
 
+function audioKeyPart(item) {
+  return String(item.rotulo || item.letra || "")
+    .replace(/^(Art\.?\s*[\wº°-]+)\.$/i, "$1")
+    .trim()
+}
+
 /**
  * High-fidelity dedicated parser.
  * Produces output that matches the structure of Codigo_de_Processo_Penal_Militar.json
@@ -177,6 +308,7 @@ function collectArticles(divisions, target = []) {
 function parseLeiDedicado({ txtPath, htmlPath = null, metadata = {} }) {
   const raw = fs.readFileSync(txtPath, "utf8")
   const html = htmlPath ? fs.readFileSync(htmlPath, "latin1") : ""
+  const htmlLinks = extractHtmlLinks(html)
   const lines = raw.split(/\r?\n/).map((rawLine, index) => ({
     raw: rawLine,
     linha: index + 1,
@@ -422,6 +554,7 @@ function parseLeiDedicado({ txtPath, htmlPath = null, metadata = {} }) {
     previousWasDivision = false
   }
 
+  if (htmlLinks.length) annotateHtmlLinks(doc, htmlLinks)
   const normalized = normalizeOutput(doc)
   return normalized
 }
@@ -431,7 +564,7 @@ function mergeAudiosFromOld(newDoc, oldDoc) {
   const audioMap = {}
   function collect(items, prefix = "") {
     (items || []).forEach(item => {
-      const key = prefix + (item.rotulo || item.letra || "")
+      const key = prefix + audioKeyPart(item)
       if (item.audio) audioMap[key] = item.audio
       if (item.paragrafos) collect(item.paragrafos, key + " ")
       if (item.incisos) collect(item.incisos, key + " ")
@@ -445,7 +578,7 @@ function mergeAudiosFromOld(newDoc, oldDoc) {
 
   function attach(items, prefix = "") {
     (items || []).forEach(item => {
-      const key = prefix + (item.rotulo || item.letra || "")
+      const key = prefix + audioKeyPart(item)
       if (audioMap[key]) item.audio = audioMap[key]
       if (item.paragrafos) attach(item.paragrafos, key + " ")
       if (item.incisos) attach(item.incisos, key + " ")
